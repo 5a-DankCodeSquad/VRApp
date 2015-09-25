@@ -1,0 +1,19 @@
+<section data-ng-controller="CoresController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Cores</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="core in cores" data-ng-href="/#!/cores/{{core._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="core.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="core.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="core.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!cores.$resolved || cores.length">
+    	No Cores yet, why don't you <a href="/#!/cores/create">create one</a>?
+    </div>
+</section>
