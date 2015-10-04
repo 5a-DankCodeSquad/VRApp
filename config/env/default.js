@@ -28,5 +28,6 @@ module.exports = {
   sessionKey: 'sessionId',
   sessionCollection: 'sessions',
   logo: 'modules/core/client/img/brand/logo.png',
-  favicon: 'modules/core/client/img/brand/favicon.ico'
+  favicon: 'modules/core/client/img/brand/favicon.ico',
+  offrApiUri: 'https://www.offrs.com/mobileapi/' 
 };
