@@ -4,7 +4,7 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://meanapp:meanapp@ds027749.mongolab.com:27749/cen3031-fall-test/mean-dev' ,
+    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://meanapp:WOULDNTYOULIKETOKNOW/mean-dev' ,
    options: {
       user: '',
       pass: ''
@@ -66,5 +66,7 @@ module.exports = {
     }
   },
   livereload: true,
-  seedDB: process.env.MONGO_SEED || false
+  seedDB: process.env.MONGO_SEED || false,
+  offrApiKey: '000000001',
+  session_secret: 'OMG BASED GOD U SWAG TO THE MAXIMUM'
 };
