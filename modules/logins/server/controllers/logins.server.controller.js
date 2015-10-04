@@ -1,0 +1,38 @@
+'use strict';
+
+var request = require('request');
+var path = require('path');
+var appDir = path.dirname(require.main.filename);
+var config = require(appDir + '/config/config');
+
+/**
+ * authenticate and get a new sessionId
+ */
+exports.getSession = function (req, res) {
+
+  //make request to offr.com endpoint
+	var request = require("request");
+
+	request.get(
+  		config.offrApiUri + 'getUser.cfm' +
+  			"?Email=" + req.body.user +
+  			"&Password=" + req.body.password +
+  			"&APIKEY=" + config.offrApiKey,
+
+	 function(error, response, body) {
+        if (error) {
+        	res.status(500).send(error);
+        } else {
+        	//get userID from parsed responce body
+        	var parsed = JSON.parse(body);
+			    var index = parsed.COLUMNS.indexOf("USERID");
+			    var userId = parsed.DATA[0][index];
+
+			    //make a new session
+          req.session.userId = userId;
+
+			    //now they never need to login again
+          res.send(); 
+		}
+	});
+};
