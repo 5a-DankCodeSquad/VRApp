@@ -1,3 +1,5 @@
+"use strict";
+
 var myLogin = angular.module('app', []);
 
 myLogin.controller('loginCtrl',function($scope) {
@@ -7,7 +9,7 @@ myLogin.controller('loginCtrl',function($scope) {
 	};
 
 	$scope.isSignUp = function() {
-		if($scope.isUp == true)
+		if($scope.isUp === true)
 		{
 			return $scope.isUp;
 		}
