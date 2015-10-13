@@ -1,21 +1,23 @@
-"use strict";
+var app = angular.module('app', []);
 
-var myLogin = angular.module('app', []);
+app.controller('loginCtrl', function($scope, $http, $window) {
+    
+    $scope.show_error_message = false;
+	$scope.error_message = "";
+	$scope.email = "";
+	$scope.password = "";
 
-myLogin.controller('loginCtrl',function($scope) {
-	$scope.isUp = false;
-	$scope.signUp = function() {
-		$scope.isUp = true;
-	};
+	$scope.signin = function() {
+        $http.post('/api/Logins', {user: $scope.email, password:$scope.password})
+		.then(
+			function(response) {
+				$window.location.href = '/';
+			},
+            function(response) {
+		        $scope.show_error_message = true;
+				$scope.error_message = response.data;
+            }
+		);
 
-	$scope.isSignUp = function() {
-		if($scope.isUp === true)
-		{
-			return $scope.isUp;
-		}
-	};
-
-	$scope.signIn = function() {
-		$scope.isUp = false;
 	};
 });
