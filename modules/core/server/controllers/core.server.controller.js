@@ -6,6 +6,10 @@ var appDir = path.dirname(require.main.filename);
 /**
  * Render the main application page
  */
-exports.renderIndex = function (req, res) {
-    res.render('modules/core/server/views/index');
+exports.renderHome = function (req, res) {
+    if(req.session && req.session.userId) {
+	    res.redirect('/template');
+    } else {
+	    res.redirect('/login');
+    }
 };
