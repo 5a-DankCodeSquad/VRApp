@@ -103,7 +103,7 @@ a#email_footer:before{
   margin: 0;
 }
 a {
-  color: #575757;
+  color: #FFFFFF;
   text-decoration: none;
 }
 a:hover,
@@ -850,7 +850,7 @@ html.layout-box .vbox > footer {
   text-decoration: none;
 }
 .nav-brand img {
-  max-height: 20px;
+  max-height: 50px;
   margin-top: -7px;
   vertical-align: middle;
 }
@@ -1333,8 +1333,8 @@ fieldset[disabled] .btn-twitter.active {
 }
 .btn-primary {
   color: #fff !important;
-  background-color: #594f8d;
-  border-color: #594f8d;
+  background-color: rgba(50,50,50,0.3);
+  border-color: rgba(50,50,50,0.3);
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1342,8 +1342,8 @@ fieldset[disabled] .btn-twitter.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #fff !important;
-  background-color: #484073;
-  border-color: #403966;
+  background-color: #196CB3;
+  border-color: #196CB3;
 }
 .btn-primary:active,
 .btn-primary.active,
