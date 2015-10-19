@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background-image: url("/Img/mTXPCMw.jpg");
+		background-size:   cover;  
+	}
+
+	p {
+    	font-family: "Courier New", Courier, monospace;
+    	color: green;
+    }
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+  setInterval(function(){
+      $('blink').each(function(){
+        $(this).css('visibility' , $(this).css('visibility') === 'hidden' ? '' : 'hidden')
+      });
+    }, 500);
+</script>
+
+<p>Assuming identity: {{ alias }}<blink>_</blink></p>
+
+<iframe width="0" height="0" align="center" src="https://www.youtube.com/embed/NYEK_yvIWas?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+</body>
