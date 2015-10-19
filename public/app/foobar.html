@@ -33,11 +33,11 @@
 	          <p class="h2" style="margin-bottom:10px;">
               Foo VS Bar
             </p>
-            
 	          <!-- CHARTS HERE -->
             <section class="panel">
                 <div class="text-center wrapper">
-                  <div class="sparkline inline" data-type="pie" data-height="150" data-slice-colors="['#acdb83','#fb6b5b']">{{ foo }},{{ bar }}</div>
+
+                  <div id="foobar-pie" class="sparkline inline"></div>
                 </div>
                 <ul class="list-group no-radius">
                   <li class="list-group-item">
@@ -48,7 +48,7 @@
                   <li class="list-group-item">
                     <span class="pull-right">{{ bar }}</span>
                     <span class="label bg-danger">2</span>
-                    BAR
+                    Bar
                   </li>
                 </ul>
             </section>
@@ -80,9 +80,35 @@
 
 
   <script>
-  angular.module('app', []).controller('foobar', function($scope) {
-    $scope.foo = 455;
-    $scope.bar = 435;
+  angular.module('app', []).controller('foobar', function($scope, $http) {
+    $scope.foo = 0;
+    $scope.bar = 0;
+     
+    $http.get('/api/reports?report_type=test')
+    .then(
+      function(response) {
+        $scope.foo = response.data.foo;
+        $scope.bar = response.data.bar;
+        $('#foobar-pie').sparkline([$scope.foo, $scope.bar], {
+            type: "pie",
+            height: 150,
+            sliceColors: ['#66FF33','#FF3300'],    
+            // Map the offset in the list of values to a name to use in the tooltip
+            tooltipFormat: '{{offset:offset}} ({{percent.1}}%)',
+            tooltipValueLookups: {
+                'offset': {
+                    0: 'foo',
+                    1: 'bar',
+                }
+            },
+        });
+      },
+      function(response) {
+        if(response.status = 403) {
+          $location.path('/login');
+        }
+      }
+    );
   });
   </script>
 
