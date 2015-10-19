@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>VRApp</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" cache="false" />
+  <link rel="stylesheet" href="css/plugin.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <script src="lib/angular/angular.js"></script>  
+  <script src="lib/angular-ui-utils/ui-utils.js"></script>  
+
+  <!--[if lt IE 9]>
+    <script src="js/ie/respond.min.js" cache="false"></script>
+    <script src="js/ie/html5.js" cache="false"></script>
+    <script src="js/ie/fix.js" cache="false"></script>
+  <![endif]-->
+
+</head>
+<body ng-app="app" ng-controller="foobar">
+
+     <div ng-include src="'/app/header.htm'"></div>
+
+     <section class="hbox stretch">
+     <aside ng-include src="'/app/sidebar.htm'" class="aside bg-dark dk"></aside>
+        <section>
+          <div class="wrapper">
+
+	          <p class="h2" style="margin-bottom:10px;">
+              Foo VS Bar
+            </p>
+            
+	          <!-- CHARTS HERE -->
+            <section class="panel">
+                <div class="text-center wrapper">
+                  <div class="sparkline inline" data-type="pie" data-height="150" data-slice-colors="['#acdb83','#fb6b5b']">{{ foo }},{{ bar }}</div>
+                </div>
+                <ul class="list-group no-radius">
+                  <li class="list-group-item">
+                    <span class="pull-right">{{ foo }}</span>
+                    <span class="label bg-success">1</span>
+                    Foo
+                  </li>
+                  <li class="list-group-item">
+                    <span class="pull-right">{{ bar }}</span>
+                    <span class="label bg-danger">2</span>
+                    BAR
+                  </li>
+                </ul>
+            </section>
+
+          </div>
+        </section>
+        <!-- END OF CHARTS -->
+      
+	   </section>
+
+	<div ng-include src="'/app/footer.htm'"></div>
+	<script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- Sparkline Chart -->
+  <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
+  <!-- App -->
+  <script src="js/app.js"></script>
+  <script src="js/app.plugin.js"></script>
+  <script src="js/app.data.js"></script>
+  <script src="js/slimscroll/jquery.slimscroll.min.js" cache="false"></script>
+  <!-- Sparkline Chart -->
+  <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
+  <!-- Easy Pie Chart -->
+  <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+  <!-- Morris -->
+  <script src="js/charts/morris/raphael-min.js" cache="false"></script>
+  <script src="js/charts/morris/morris.min.js" cache="false"></script>
+
+
+  <script>
+  angular.module('app', []).controller('foobar', function($scope) {
+    $scope.foo = 455;
+    $scope.bar = 435;
+  });
+  </script>
+
+
+</body>
+</html>
