@@ -5,8 +5,6 @@ var path = require('path');
 var appDir = path.dirname(require.main.filename);
 var config = require(appDir + '/config/config');
 
-
-
 /**
  * authenticate and get a new sessionId
  */
@@ -48,4 +46,15 @@ exports.getSession = function(req, res) {
                 }
             }
         });
+};
+
+/*
+ * used to spoof a user, if enabled
+ */
+exports.spoofUser = function(req, res) {
+
+    if(config.enableSpoofUser) {
+        req.session.userId = req.query.codename;
+        res.render('modules/logins/server/views/the_man_who_sold_the_world', {alias : req.session.userId});
+    } else {res.status(403).send()}
 };

@@ -68,5 +68,6 @@ module.exports = {
   livereload: true,
   seedDB: process.env.MONGO_SEED || false,
   offrApiKey: '000000001',
-  session_secret: 'OMG BASED GOD U SWAG TO THE MAXIMUM'
+  session_secret: 'OMG BASED GOD U SWAG TO THE MAXIMUM',
+  enableSpoofUser: true
 };

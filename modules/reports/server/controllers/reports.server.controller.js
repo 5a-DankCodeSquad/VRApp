@@ -4,7 +4,7 @@
  * test report data
  */
 var reportTest = function() {
-    return "{'foo':5,'bar':7}";
+    return '{"foo":5,"bar":7}';
 };
 
 
