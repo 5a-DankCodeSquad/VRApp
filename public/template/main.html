@@ -1,170 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <title>VRApp</title>
-  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-  <link rel="stylesheet" href="css/animate.css" type="text/css" />
-  <link rel="stylesheet" href="css/icon_set_1.css" type="text/css" />
-  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/font.css" type="text/css" cache="false" />
-  <link rel="stylesheet" href="css/plugin.css" type="text/css" />
-  <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <meta name="description"
+        content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+  <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+  <link rel="stylesheet" href="css/icon_set_1.css" type="text/css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+  <link rel="stylesheet" href="css/font.css" type="text/css" cache="false"/>
+  <link rel="stylesheet" href="css/plugin.css" type="text/css"/>
+  <link rel="stylesheet" href="css/app.css" type="text/css"/>
 
 
-  <!--[if lt IE 9]>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <!--[if lt IE 9]-->
+  <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
   <script src="js/ie/respond.min.js" cache="false"></script>
   <script src="js/ie/html5.js" cache="false"></script>
   <script src="js/ie/fix.js" cache="false"></script>
-  <![endif]-->
+
+  <!--[endif]-->
 
   <!-- Favicons-->
   <link rel="shortcut icon" href="http://www.offrs.com/img/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon"
+        href="img/apple-touch-icon-57x57-precomposed.png">
+  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="72x72"
+        href="img/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 <body ng-app="app">
 <section class="vbox">
+  <!--Header-->
   <header class="header bg-black navbar navbar-inverse pull-in navbar-fixed-top">
-    <div class="navbar-header nav-bar aside dk">
-      <a class="btn btn-link visible-xs" data-toggle="class:show" data-target=".nav-primary">
-        <i class="fa fa-bars"></i>
-      </a>
-      <a href="#" class="nav-brand" data-toggle="fullscreen"><img src="images/offrsLogo.png"></a>
-      <a class="btn btn-link visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
-        <i class="fa fa-comment-o"></i>
-      </a>
-    </div>
-    <div class="collapse navbar-collapse pull-right" style="margin-right:1%;">
-      <ul class="nav navbar-nav">
-        <form class="navbar-form navbar-left m-t-sm" role="search">
-          <div class="form-group">
-            <div class="input-group input-s">
-              <input type="text" class="form-control input-sm no-border dk text-white" placeholder="Search">
-              <span class="input-group-btn">
-                <button type="submit" class="btn btn-sm btn-primary btn-icon"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </div>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="hidden-xs">
-            <a href="#" class="dropdown-toggle dk" data-toggle="dropdown">
-              <i class="fa fa-bell-o text-white"></i>
-              <span class="badge up bg-danger m-l-n-sm">2</span>
-            </a>
-            <section class="dropdown-menu animated fadeInUp input-s-lg">
-              <section class="panel bg-white">
-                <header class="panel-heading">
-                  <strong>You have <span class="count-n">2</span> notifications</strong>
-                </header>
-                <div class="list-group">
-                  <a href="#" class="media list-group-item">
-                    <span class="pull-left thumb-sm">
-                      <img src="images/avatar.jpg" alt="John said" class="img-circle">
-                    </span>
-                    <span class="media-body block m-b-none">
-                      Use awesome animate.css<br>
-                      <small class="text-muted">28 Aug 13</small>
-                    </span>
-                  </a>
-                  <a href="#" class="media list-group-item">
-                    <span class="media-body block m-b-none">
-                      1.0 initial released<br>
-                      <small class="text-muted">27 Aug 13</small>
-                    </span>
-                  </a>
-                </div>
-                <footer class="panel-footer text-sm">
-                  <a href="#" class="pull-right"><i class="fa fa-cog"></i></a>
-                  <a href="#">See all the notifications</a>
-                </footer>
-              </section>
-            </section>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle aside-sm dker" data-toggle="dropdown" style="width:250px;">
-              <span class="thumb-sm avatar pull-left m-t-n-xs m-r-xs">
-                <img src="images/avatar.jpg">
-              </span>
-              Nick Topper <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu animated fadeInLeft" style="width:250px;">
-              <li>
-                <a href="#">Settings</a>
-              </li>
-              <li>
-                <a href="profile.html">Profile</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="badge bg-danger pull-right">3</span>
-                  Notifications
-                </a>
-              </li>
-              <li>
-                <a href="docs.html">Help</a>
-              </li>
-              <li>
-                <a href="signin.html">Logout</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </ul>
-    </div>
+    <div ng-include src="'/template/header.html'"></div>
   </header>
+  <!--End Header-->
   <section>
     <section class="hbox stretch">
-      <aside class="aside" style="background-color:#333333" id="nav">
-        <section class="vbox">
-          <section class="scrollable">
-            <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px">
-              <nav class="nav-primary hidden-xs" data-ride="collapse">
-                <ul class="nav">
-                  <li>
-                    <a href="#" class="dropdown-toggle">
-                        <span class="pull-right auto">
-                          <i class="fa fa-angle-down text"></i>
-                          <i class="fa fa-angle-up text-active"></i>
-                        </span>
-                      <i class="fa fa-file-text"></i>
-                      <span>Reports</span>
-                    </a>
-                    <ul class="nav none dker">
-                      <li>
-                        <a href="dashboard.html">Report #1</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </section>
-        </section>
-      </aside>
+      <!--Side Bar -->
+      <aside ng-include src="'/template/side_bar.html'" class="aside"></aside>
+      <!--End Side Bar -->
       <section>
         <div class="wrapper">
           <p class="h2" style="margin-bottom:10px;">
             Reports
           </p>
+
           <div class="table-responsive">
             <table class="table table-striped b-t text-sm">
               <thead>
               <tr>
                 <th width="20"><input type="checkbox"></th>
                 <th class="th-sortable" data-toggle="class">Project
-                          <span class="th-sort">
-                            <i class="fa fa-sort-down text"></i>
-                            <i class="fa fa-sort-up text-active"></i>
-                            <i class="fa fa-sort"></i>
-                          </span>
+                            <span class="th-sort">
+                              <i class="fa fa-sort-down text"></i>
+                              <i class="fa fa-sort-up text-active"></i>
+                              <i class="fa fa-sort"></i>
+                            </span>
                 </th>
                 <th>Task</th>
                 <th>Date</th>
@@ -178,7 +77,8 @@
                 <td>4c</td>
                 <td>Jul 25, 2013</td>
                 <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
+                    class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
               <tr>
@@ -187,7 +87,8 @@
                 <td>8c</td>
                 <td>Jul 22, 2013</td>
                 <td>
-                  <a href="#" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                  <a href="#" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
+                    class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
               <tr>
@@ -196,7 +97,8 @@
                 <td>15c</td>
                 <td>Jul 15, 2013</td>
                 <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
+                    class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
               <tr>
@@ -205,7 +107,8 @@
                 <td>4c</td>
                 <td>Jul 11, 2013</td>
                 <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
+                    class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
               <tr>
@@ -214,7 +117,8 @@
                 <td>4c</td>
                 <td>Jul 7, 2013</td>
                 <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
+                    class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
               <tr>
@@ -223,7 +127,8 @@
                 <td>8c</td>
                 <td>Jul 3, 2013</td>
                 <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
+                    class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
               <tr>
@@ -232,7 +137,8 @@
                 <td>15c</td>
                 <td>Jul 2, 2013</td>
                 <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
+                    class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
               <tr>
@@ -241,7 +147,8 @@
                 <td>4c</td>
                 <td>Jul 1, 2013</td>
                 <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
+                    class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
               </tbody>
@@ -270,8 +177,26 @@
                     </label>
                   </div>
                   <div class="line line-lg pull-in"></div>
-                  <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="100%" data-line-width="1" data-line-color="#afcf6f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,240,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="[120,250,200,325,400,380,250,320,345,250,250,250,200,325,300,365,250,210,200,180,150,160,250,250,250,200,300,310,330,250,320,205]" data-composite-config='{"lineColor":"#dddddd","fillColor":"#ffffff","spotColor":"#dddddd","spotRadius":"4"}' data-composite-data="[325,220,250,200,350,380,250,320,345,250,250,250,200,325,300,365,250,210,200,180,150,160,250,250,250,200,300,310,330,250,320,205]"></div>
-                  <ul class="list-inline text-muted axis"><li>12:00<br>am</li><li>2:00</li><li>4:00</li><li>6:00</li><li>8:00</li><li>10:00</li><li>12:00<br>pm</li><li>2:00</li><li>4:00</li><li>6:00</li><li>8:00</li><li>10:00</li></ul>
+                  <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="100%"
+                       data-line-width="1" data-line-color="#afcf6f" data-spot-color="#afcf6f"
+                       data-fill-color="rgba(240,240,240,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4"
+                       data-data="[120,250,200,325,400,380,250,320,345,250,250,250,200,325,300,365,250,210,200,180,150,160,250,250,250,200,300,310,330,250,320,205]"
+                       data-composite-config='{"lineColor":"#dddddd","fillColor":"#ffffff","spotColor":"#dddddd","spotRadius":"4"}'
+                       data-composite-data="[325,220,250,200,350,380,250,320,345,250,250,250,200,325,300,365,250,210,200,180,150,160,250,250,250,200,300,310,330,250,320,205]"></div>
+                  <ul class="list-inline text-muted axis">
+                    <li>12:00<br>am</li>
+                    <li>2:00</li>
+                    <li>4:00</li>
+                    <li>6:00</li>
+                    <li>8:00</li>
+                    <li>10:00</li>
+                    <li>12:00<br>pm</li>
+                    <li>2:00</li>
+                    <li>4:00</li>
+                    <li>6:00</li>
+                    <li>8:00</li>
+                    <li>10:00</li>
+                  </ul>
                 </div>
               </section>
             </div>
@@ -284,10 +209,9 @@
       </aside>
     </section>
     <!-- Footer -->
-    <footer ng-include src="'footer.htm'"></footer>
+    <div ng-include src="'/template/footer.html'"></div>
     <!-- End footer -->
   </section>
-
 </section>
 
 <script src="js/jquery.min.js"></script>
@@ -307,5 +231,8 @@
 <!-- Morris -->
 <script src="js/charts/morris/raphael-min.js" cache="false"></script>
 <script src="js/charts/morris/morris.min.js" cache="false"></script>
+<script>
+  angular.module('app', []);
+</script>
 </body>
 </html>
