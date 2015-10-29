@@ -4,6 +4,96 @@ body {
   color: #717171;
   background-color: #f3f5f9;
 }
+
+/* Footer  */
+footer {
+  background:#333 url(http://www.offrs.com/img/pattern.png) repeat 0 0;
+  color:#fff;
+  padding:30px 0 10px 0;
+}
+footer h3{
+  font-size:16px;
+  font-weight:700;
+  color:#fff;
+}
+footer a{
+  color:#fff;
+}
+footer a:hover{
+  color:#999;
+}
+footer ul{
+  margin:0;
+  padding: 0 0 20px 0;
+  list-style:none;
+}
+#social_footer{
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.2);
+  padding-top:30px;
+  margin-top:30px;
+}
+#social_footer p{
+  font-size:12px;
+  color:#8c8c8c;
+}
+#social_footer ul{
+  margin:0;
+  padding:0 0 10px 0;
+  text-align:center;
+}
+#social_footer ul li{
+  display:inline-block;
+  margin:0 5px 10px 5px;
+}
+#social_footer ul li a{
+  color:#fff;
+  text-align:center;
+  line-height:34px;
+  display:block;
+  font-size:16px;
+  width:35px;
+  height:35px;
+  border:1px solid rgba(255,255,255,0.3);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#social_footer ul li a:hover{
+  border:1px solid #fff;
+  background:#fff;
+  color:#111;
+}
+a#phone, a#email_footer{
+  display:block;
+  position:relative;
+  color:#fdf7ac;
+  font-size:16px;
+  padding-left:40px;
+  margin:20px 0;
+}
+a#phone:hover, a#email_footer:hover{
+  color:#fff;
+}
+a#phone:before, a#email_footer:before{
+  font-style: normal;
+  font-weight: normal;
+  font-family: "icon_set_1";
+  position:absolute;
+}
+a#phone:before{
+  font-size:30px;
+  content: "\79";
+  left:0;
+  top:0;
+}
+a#email_footer:before{
+  font-size:28px;
+  content: "\74";
+  left:0;
+  top:5px;
+}
+
 .h1,
 .h2,
 .h3,
@@ -13,7 +103,7 @@ body {
   margin: 0;
 }
 a {
-  color: #575757;
+  color: #FFFFFF;
   text-decoration: none;
 }
 a:hover,
@@ -760,7 +850,7 @@ html.layout-box .vbox > footer {
   text-decoration: none;
 }
 .nav-brand img {
-  max-height: 20px;
+  max-height: 50px;
   margin-top: -7px;
   vertical-align: middle;
 }
@@ -1243,8 +1333,8 @@ fieldset[disabled] .btn-twitter.active {
 }
 .btn-primary {
   color: #fff !important;
-  background-color: #594f8d;
-  border-color: #594f8d;
+  background-color: rgba(50,50,50,0.3);
+  border-color: rgba(50,50,50,0.3);
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1252,8 +1342,8 @@ fieldset[disabled] .btn-twitter.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #fff !important;
-  background-color: #484073;
-  border-color: #403966;
+  background-color: #196CB3;
+  border-color: #196CB3;
 }
 .btn-primary:active,
 .btn-primary.active,
