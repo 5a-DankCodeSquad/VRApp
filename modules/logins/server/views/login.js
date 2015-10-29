@@ -15,8 +15,7 @@ myLogin.controller('loginCtrl',function($scope) {
 		}
 	};
 
-	$scope.signIn = function($scope, $http) {
+	$scope.signIn = function() {
 		$scope.isUp = false;
-		//$http.post;
 	};
 });
