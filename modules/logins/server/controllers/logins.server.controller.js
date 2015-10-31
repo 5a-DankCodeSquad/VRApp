@@ -5,8 +5,6 @@ var path = require('path');
 var appDir = path.dirname(require.main.filename);
 var config = require(appDir + '/config/config');
 
-
-
 /**
  * authenticate and get a new sessionId
  */
@@ -36,8 +34,15 @@ exports.getSession = function(req, res) {
                     var index = parsed.COLUMNS.indexOf("USERID");
                     var userId = parsed.DATA[0][index];
 
+                    var FNAME = parsed.DATA[parsed.COLUMNS.indexOf("FNAME")];
+                    var LNAME = parsed.DATA[parsed.COLUMNS.indexOf("LNAME")];
+ 
                     //make a new session
                     req.session.userId = userId;
+
+	            //store name with session, needed to re-construct campain ID
+		    req.session.fname = FNAME;
+		    req.session.lname = LNAME;
 
                     //now they never need to login again
                     res.send();
