@@ -37,6 +37,24 @@ var cti = function(req, res) {
 };
 
 /**
+ * campaign summary report
+ */
+function getCampaign(req, res) {
+
+    //construct campaign ID
+    var cid = req.session.userId + "-" + req.session.fname + req.session.lname;
+
+    //arguments
+    var url = base_url +
+        "?data_format=summary" +
+        "&campaigns=" + cid;
+
+    request.get({url: url}, function (error, responce, body) {
+		res.send(body);
+	});
+}
+
+/**
  * selects correct report type and sends back appropriate data
  */
 exports.getReportData = function (req, res) {
@@ -57,6 +75,9 @@ exports.getReportData = function (req, res) {
 		    	case "cti":
 		    		cti(req, res);
 		    		break;
+			case "campaign":
+				getCampaign(req, res);
+				break;
 	    }
     } 
 };
