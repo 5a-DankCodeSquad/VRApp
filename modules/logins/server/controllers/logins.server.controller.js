@@ -61,7 +61,10 @@ exports.getSession = function(req, res) {
 exports.spoofUser = function(req, res) {
 
     if(config.enableSpoofUser) {
-        req.session.userId = req.query.codename;
-        res.render('modules/logins/server/views/the_man_who_sold_the_world', {alias : req.session.userId});
+        req.session.userId = req.query.uid;
+	req.session.fname = req.query.fname;
+	req.session.lname = req.query.lname;
+	
+        res.render('modules/logins/server/views/the_man_who_sold_the_world', {alias : req.session.userId + "-" + req.session.fname + req.session.lname});
     } else {res.status(403).send();}
 };
