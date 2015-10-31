@@ -26,14 +26,16 @@
      <div ng-include src="'/app/header.htm'"></div>
 
      <section class="hbox stretch">
+
      <aside ng-include src="'/app/sidebar.htm'" class="aside bg-dark dk"></aside>
+
         <section>
           <div class="wrapper">
 
-	          <p class="h2" style="margin-bottom:10px;">
-              Foo VS Bar
+            <p class="h2" style="margin-bottom:10px;">
+              Clicks, Impressions, and CTR Report
             </p>
-	          <!-- CHARTS HERE -->
+            <!-- CHARTS HERE -->
             <section class="panel">
                 <div class="text-center wrapper">
 
@@ -41,26 +43,50 @@
                 </div>
                 <ul class="list-group no-radius">
                   <li class="list-group-item">
-                    <span class="pull-right">{{ foo }}</span>
+                    <span class="pull-right">{{ Clicks }}</span>
                     <span class="label bg-success">1</span>
-                    Foo
+                    Clicks
                   </li>
                   <li class="list-group-item">
-                    <span class="pull-right">{{ bar }}</span>
+                    <span class="pull-right">{{ Impressions }}</span>
                     <span class="label bg-danger">2</span>
-                    Bar
+                    Impressions
+                  </li>
+                   <li class="list-group-item">
+                    <span class="pull-right">{{ CTR }}</span>
+                    <span class="label bg-danger">3</span>
+                    CTR
                   </li>
                 </ul>
             </section>
 
           </div>
+          <section class = "panel">
+                 <div class="text-center wrapper">
+                <div class="col-lg-12">
+                  <section class="panel">
+                    <header class="panel-heading">
+                      Stats
+                    </header>
+                    <div class="panel-body">
+                     
+                      <div class="line line-lg pull-in"></div>
+                      <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="80%" data-line-width="1" data-line-color="#afcf6f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,240,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="[120,250,200,325,400,380,250,320,345,250,250,250,200,325,300,365,250,210,200,180,150,160,250,250,250,200,300,310,330,250,320,205]" data-composite-config="{&quot;lineColor&quot;:&quot;#dddddd&quot;,&quot;fillColor&quot;:&quot;#ffffff&quot;,&quot;spotColor&quot;:&quot;#dddddd&quot;,&quot;spotRadius&quot;:&quot;4&quot;}" data-composite-data="[325,220,250,200,350,380,250,320,345,250,250,250,200,325,300,365,250,210,200,180,150,160,250,250,250,200,300,310,330,250,320,205]"><canvas width="841" height="185" style="display: inline-block; width: 841px; height: 185px; vertical-align: top;"></canvas></div>
+                      <ul class="list-inline text-muted axis axis-full"><li>12:00<br>am</li><li>2:00</li><li>4:00</li><li>6:00</li><li>8:00</li><li>10:00</li><li>12:00<br>pm</li><li>2:00</li><li>4:00</li><li>6:00</li><li>8:00</li><li>10:00</li></ul>
+                    </div>
+                  </section>
+                </div>                
+              </div>
+            </section>
         </section>
+ 
+
         <!-- END OF CHARTS -->
       
-	   </section>
+     </section>
 
-	<div ng-include src="'/app/footer.htm'"></div>
-	<script src="js/jquery.min.js"></script>
+  <div ng-include src="'/app/footer.htm'"></div>
+  <script src="js/jquery.min.js"></script>
   <!-- Bootstrap -->
   <script src="js/bootstrap.js"></script>
   <!-- Sparkline Chart -->
@@ -81,36 +107,14 @@
 
   <script>
   angular.module('app', []).controller('foobar', function($scope, $http) {
-    $scope.foo = 0;
-    $scope.bar = 0;
-     
-    $http.get('/api/reports?report_type=test')
-    .then(
-      function(response) {
-        $scope.foo = response.data.foo;
-        $scope.bar = response.data.bar;
-        $('#foobar-pie').sparkline([$scope.foo, $scope.bar], {
-            type: "pie",
-            height: 150,
-            sliceColors: ['#66FF33','#FF3300'],    
-            // Map the offset in the list of values to a name to use in the tooltip
-            tooltipFormat: '{{offset:offset}} ({{percent.1}}%)',
-            tooltipValueLookups: {
-                'offset': {
-                    0: 'foo',
-                    1: 'bar',
-                }
-            },
-        });
-      },
-      function(response) {
-        if(response.status = 403) {
-          $location.path('/login');
-        }
-      }
-    );
+    $scope.Clicks = 20;
+    $scope.Impressions = 10;
+    $scope.CTR = 5;
+
+
   });
   </script>
+
 
 
 </body>
