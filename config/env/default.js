@@ -29,5 +29,6 @@ module.exports = {
   sessionCollection: 'sessions',
   logo: 'modules/core/client/img/brand/logo.png',
   favicon: 'modules/core/client/img/brand/favicon.ico',
-  offrApiUri: 'https://www.offrs.com/mobileapi/' 
+  offrApiUri: 'https://www.offrs.com/mobileapi/',
+  adrollApiUri: 'api.adroll.com/v1/'
 };
