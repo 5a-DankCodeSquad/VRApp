@@ -34,8 +34,15 @@ exports.getSession = function(req, res) {
                     var index = parsed.COLUMNS.indexOf("USERID");
                     var userId = parsed.DATA[0][index];
 
+                    var FNAME = parsed.DATA[parsed.COLUMNS.indexOf("FNAME")];
+                    var LNAME = parsed.DATA[parsed.COLUMNS.indexOf("LNAME")];
+ 
                     //make a new session
                     req.session.userId = userId;
+
+	            //store name with session, needed to re-construct campain ID
+		    req.session.fname = FNAME;
+		    req.session.lname = LNAME;
 
                     //now they never need to login again
                     res.send();
