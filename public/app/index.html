@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>VRApp</title>
+  <meta name="description"
+        content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+  <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+  <link rel="stylesheet" href="css/icon_set_1.css" type="text/css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+  <link rel="stylesheet" href="css/font.css" type="text/css" cache="false"/>
+  <link rel="stylesheet" href="css/plugin.css" type="text/css"/>
+  <link rel="stylesheet" href="css/app.css" type="text/css"/>
+
+
+  <!--[if lt IE 9]-->
+  <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
+  <script src="js/ie/respond.min.js" cache="false"></script>
+  <script src="js/ie/html5.js" cache="false"></script>
+  <script src="js/ie/fix.js" cache="false"></script>
+
+  <!--[endif]-->
+
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="http://www.offrs.com/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon"
+        href="img/apple-touch-icon-57x57-precomposed.png">
+  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="72x72"
+        href="img/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon" type="http://www.offrs.com/image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+<body ng-app="app" ng-controller="report">
+<section class="vbox">
+  <!--Header-->
+  <header class="header bg-black navbar navbar-inverse pull-in navbar-fixed-top">
+    <div ng-include src="'/app/header.html'"></div>
+  </header>
+  <!--End Header-->
+  <section>
+    <section class="hbox stretch">
+      <!--Side Bar -->
+      <aside ng-include src="'/app/side_bar.html'" class="aside"></aside>
+      <!--End Side Bar -->
+      <section>
+        <div class="wrapper">
+
+	<br>
+
+         <section class="panel panel-primary">
+  	  <div class="panel-heading">
+    		<h3 class="panel-title">Campaing Report Overview</h3>
+  	  </div>
+	  <div class="panel-body">
+
+
+		<table class="table">
+		<thead>
+			<tr>
+				<th>
+					overview
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+          	<tr ng-repeat="(key, value) in report">
+  			<td>
+				{{key.split('_').join(' ')}}
+	  		</td>
+			<td>
+				{{value}}
+			</td>
+		</tr>
+		<tbody>
+		</table>
+		<div ng-hide="overview_ready">
+			<p align="center">
+ 			Loading
+			<br>
+			<img src="/Img/ajax-loader.gif" />
+			</p>
+		</div>	
+
+	 </div>
+     	 </section>
+      </section>
+      <aside class="bg-light lter b-l aside-sm">
+        <div class="wrapper">aside content</div>
+      </aside>
+    </section>
+    <!-- Footer -->
+    <div ng-include src="'/app/footer.html'"></div>
+    <!-- End footer -->
+  </section>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.js"></script>
+<!-- Sparkline Chart -->
+<script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
+<!-- App -->
+<script src="js/app.js"></script>
+<script src="js/app.plugin.js"></script>
+<script src="js/app.data.js"></script>
+<script src="js/slimscroll/jquery.slimscroll.min.js" cache="false"></script>
+<!-- Sparkline Chart -->
+<script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
+<!-- Easy Pie Chart -->
+<script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+<!-- Morris -->
+<script src="js/charts/morris/raphael-min.js" cache="false"></script>
+<script src="js/charts/morris/morris.min.js" cache="false"></script>
+<script>
+  angular.module('app', []).controller('report', function($scope, $http) {
+    
+    $scope.report = [];
+    $scope.overview_ready = false;
+ 
+    $http.get('/api/reports?report_type=campaign')
+    .then(
+      function(response) {
+      	$scope.report = response.data.results;
+        $scope.overview_ready = true;
+      },
+      function(response) {
+        if(response.status = 403) {
+          $location.path('/login');
+        }
+      }
+    );
+  });
+</script>
+</body>
+</html>
