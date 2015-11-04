@@ -66,5 +66,6 @@ module.exports = {
       }
     }
   },
-  seedDB: process.env.MONGO_SEED || false
+  seedDB: process.env.MONGO_SEED || false,
+  enableSpoofUser: false
 };
