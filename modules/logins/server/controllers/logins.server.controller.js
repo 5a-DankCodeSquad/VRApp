@@ -5,6 +5,8 @@ var path = require('path');
 var appDir = path.dirname(require.main.filename);
 var config = require(appDir + '/config/config');
 
+
+
 /**
  * gives the session an EID
  */
@@ -71,7 +73,6 @@ exports.getSession = function(req, res) {
 
                     var index = parsed.COLUMNS.indexOf("USERID");
                     var userId = parsed.DATA[0][index];
-
                     var FNAME = parsed.DATA[parsed.COLUMNS.indexOf("FNAME")];
                     var LNAME = parsed.DATA[parsed.COLUMNS.indexOf("LNAME")];
  
