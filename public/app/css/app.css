@@ -11,6 +11,10 @@ footer {
   color:#fff;
   padding:30px 0 10px 0;
 }
+
+/*Table */
+.deleterow{cursor:pointer}
+
 footer h3{
   font-size:16px;
   font-weight:700;

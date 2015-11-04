@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+ <!-- Open Sans font from Google CDN -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+
+  <!-- Pixel Admin's stylesheets -->
+  <link href="http://infinite-woodland-5276.herokuapp.com/assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/pixel-admin.min.css" rel="stylesheet" type="text/css">
+  <link href="http://infinite-woodland-5276.herokuapp.com/assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+  <link href="http://infinite-woodland-5276.herokuapp.com/assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+  <link href="http://infinite-woodland-5276.herokuapp.com/assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="theme-adminflare">
+
+<script>var init = [];</script>   
+<!-- TABLE 
+===========================================================================-->
+        <!-- Javascript -->
+        <script>
+          init.push(function () {
+            $('#jq-datatables-example').dataTable();
+            $('#jq-datatables-example_wrapper .table-caption').text('Reports');
+            $('#jq-datatables-example_wrapper .dataTables_filter input').attr('placeholder', 'Search...');
+          });
+        </script>
+        <!-- / Javascript -->
+
+        <div class="panel">
+          <div class="panel-body">
+            <div class="table-primary">
+              <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="jq-datatables-example">
+                <thead>
+                  <tr>
+                    <th>Select</th>
+                    <th>Project</th>
+                    <th>Browser</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                <td><input type="checkbox" name="post[]" value="3"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 22, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Avatar system</td>
+                <td>15c</td>
+                <td>Jul 15, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Throwdown</td>
+                <td>4c</td>
+                <td>Jul 11, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="5"></td>
+                <td>Idrawfast</td>
+                <td>4c</td>
+                <td>Jul 7, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="6"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 3, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="7"></td>
+                <td>Avatar system </b></td>
+                <td>15c</td>
+                <td>Jul 2, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="8"></td>
+                <td>Videodown</td>
+                <td>4c</td>
+                <td>Jul 1, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+                  <tr>
+                <td><input type="checkbox" name="post[]" value="3"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 22, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Avatar system</td>
+                <td>15c</td>
+                <td>Jul 15, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Throwdown</td>
+                <td>4c</td>
+                <td>Jul 11, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="5"></td>
+                <td>Idrawfast</td>
+                <td>4c</td>
+                <td>Jul 7, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="6"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 3, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="7"></td>
+                <td>Avatar system </b></td>
+                <td>15c</td>
+                <td>Jul 2, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="8"></td>
+                <td>Videodown</td>
+                <td>4c</td>
+                <td>Jul 1, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+                 <tr>
+                <td><input type="checkbox" name="post[]" value="3"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 22, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Avatar system</td>
+                <td>15c</td>
+                <td>Jul 15, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Throwdown</td>
+                <td>4c</td>
+                <td>Jul 11, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="5"></td>
+                <td>Idrawfast</td>
+                <td>4c</td>
+                <td>Jul 7, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="6"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 3, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="7"></td>
+                <td>Avatar system </b></td>
+                <td>15c</td>
+                <td>Jul 2, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="8"></td>
+                <td>Videodown</td>
+                <td>4c</td>
+                <td>Jul 1, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+                  <tr>
+                <td><input type="checkbox" name="post[]" value="3"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 22, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Avatar system</td>
+                <td>15c</td>
+                <td>Jul 15, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Throwdown</td>
+                <td>4c</td>
+                <td>Jul 11, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="5"></td>
+                <td>Idrawfast</td>
+                <td>4c</td>
+                <td>Jul 7, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="6"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 3, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="7"></td>
+                <td>Avatar system </b></td>
+                <td>15c</td>
+                <td>Jul 2, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="8"></td>
+                <td>Videodown</td>
+                <td>4c</td>
+                <td>Jul 1, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+                   <tr>
+                <td><input type="checkbox" name="post[]" value="3"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 22, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Avatar system</td>
+                <td>15c</td>
+                <td>Jul 15, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Throwdown</td>
+                <td>4c</td>
+                <td>Jul 11, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="5"></td>
+                <td>Idrawfast</td>
+                <td>4c</td>
+                <td>Jul 7, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="6"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 3, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="7"></td>
+                <td>Avatar system </b></td>
+                <td>15c</td>
+                <td>Jul 2, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="8"></td>
+                <td>Videodown</td>
+                <td>4c</td>
+                <td>Jul 1, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+                 <tr>
+                <td><input type="checkbox" name="post[]" value="3"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 22, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Avatar system</td>
+                <td>15c</td>
+                <td>Jul 15, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Throwdown</td>
+                <td>4c</td>
+                <td>Jul 11, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="5"></td>
+                <td>Idrawfast</td>
+                <td>4c</td>
+                <td>Jul 7, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="6"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 3, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="7"></td>
+                <td>Avatar system </b></td>
+                <td>15c</td>
+                <td>Jul 2, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="8"></td>
+                <td>Videodown</td>
+                <td>4c</td>
+                <td>Jul 1, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+             <tr>
+                <td><input type="checkbox" name="post[]" value="3"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 22, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Avatar system</td>
+                <td>15c</td>
+                <td>Jul 15, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="4"></td>
+                <td>Throwdown</td>
+                <td>4c</td>
+                <td>Jul 11, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="5"></td>
+                <td>Idrawfast</td>
+                <td>4c</td>
+                <td>Jul 7, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="6"></td>
+                <td>Formasa</td>
+                <td>8c</td>
+                <td>Jul 3, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="7"></td>
+                <td>Avatar system </b></td>
+                <td>15c</td>
+                <td>Jul 2, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="post[]" value="8"></td>
+                <td>Videodown</td>
+                <td>4c</td>
+                <td>Jul 1, 2013</td>
+                <td class='deleterow' >
+                  <button title="" type="button" class="btn btn-danger remove show_tip" data-original-title="Remove from list">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+              </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+<!-- /TABLE -->
+
+<!-- Get jQuery from Google CDN -->
+<!--[if !IE]> -->
+  <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">'+"<"+"/script>"); </script>
+<!-- <![endif]-->
+
+<!-- Pixel Admin's javascripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="http://infinite-woodland-5276.herokuapp.com/assets/javascripts/pixel-admin.min.js"></script>
+<script src="js/table/delete_row.js" cache="false"></script>
+
+<script type="text/javascript">
+  init.push(function () {
+    // Javascript code here
+  })
+  window.PixelAdmin.start(init);
+</script>
+
+</body>
+</html>

@@ -206,7 +206,10 @@ Date.now = Date.now || function() { return +new Date; };
         }, 500);
       }
   	});
-    
+
+
+
+
     // fix vbox
     var fixVbox = function(){
       $('.vbox > footer').prev('section').addClass('w-f');

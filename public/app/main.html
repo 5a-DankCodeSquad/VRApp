@@ -14,6 +14,17 @@
   <link rel="stylesheet" href="css/plugin.css" type="text/css"/>
   <link rel="stylesheet" href="css/app.css" type="text/css"/>
 
+ <!--Report CSS-->
+<!-- Open Sans font from Google CDN -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+
+  <!-- Pixel Admin's stylesheets -->
+  <link href="http://infinite-woodland-5276.herokuapp.com/assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/pixel-admin.min.css" rel="stylesheet" type="text/css">
+  <link href="http://infinite-woodland-5276.herokuapp.com/assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+  <link href="http://infinite-woodland-5276.herokuapp.com/assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+  <link href="http://infinite-woodland-5276.herokuapp.com/assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+  <!--/Report CSS-->
 
   <!--[if lt IE 9]-->
   <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
@@ -35,7 +46,7 @@
         href="img/apple-touch-icon-144x144-precomposed.png">
 
 </head>
-<body ng-app="app">
+<body ng-app="app" class="theme-adminflare">
 <section class="vbox">
   <!--Header-->
   <header class="header bg-black navbar navbar-inverse pull-in navbar-fixed-top">
@@ -48,112 +59,21 @@
       <aside ng-include src="'/app/side_bar.html'" class="aside"></aside>
       <!--End Side Bar -->
       <section>
-        <div class="wrapper">
-          <p class="h2" style="margin-bottom:10px;">
-            Reports
-          </p>
 
-          <div class="table-responsive">
-            <table class="table table-striped b-t text-sm">
-              <thead>
-              <tr>
-                <th width="20"><input type="checkbox"></th>
-                <th class="th-sortable" data-toggle="class">Project
-                            <span class="th-sort">
-                              <i class="fa fa-sort-down text"></i>
-                              <i class="fa fa-sort-up text-active"></i>
-                              <i class="fa fa-sort"></i>
-                            </span>
-                </th>
-                <th>Task</th>
-                <th>Date</th>
-                <th width="30"></th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td><input type="checkbox" name="post[]" value="2"></td>
-                <td>Idrawfast</td>
-                <td>4c</td>
-                <td>Jul 25, 2013</td>
-                <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
-                    class="fa fa-times text-danger text"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="post[]" value="3"></td>
-                <td>Formasa</td>
-                <td>8c</td>
-                <td>Jul 22, 2013</td>
-                <td>
-                  <a href="#" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
-                    class="fa fa-times text-danger text"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="post[]" value="4"></td>
-                <td>Avatar system</td>
-                <td>15c</td>
-                <td>Jul 15, 2013</td>
-                <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
-                    class="fa fa-times text-danger text"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="post[]" value="4"></td>
-                <td>Throwdown</td>
-                <td>4c</td>
-                <td>Jul 11, 2013</td>
-                <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
-                    class="fa fa-times text-danger text"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="post[]" value="5"></td>
-                <td>Idrawfast</td>
-                <td>4c</td>
-                <td>Jul 7, 2013</td>
-                <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
-                    class="fa fa-times text-danger text"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="post[]" value="6"></td>
-                <td>Formasa</td>
-                <td>8c</td>
-                <td>Jul 3, 2013</td>
-                <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
-                    class="fa fa-times text-danger text"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="post[]" value="7"></td>
-                <td>Avatar system </b></td>
-                <td>15c</td>
-                <td>Jul 2, 2013</td>
-                <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
-                    class="fa fa-times text-danger text"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="post[]" value="8"></td>
-                <td>Videodown</td>
-                <td>4c</td>
-                <td>Jul 1, 2013</td>
-                <td>
-                  <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i
-                    class="fa fa-times text-danger text"></i></a>
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
+      <script>var init = [];</script>   
+<!-- TABLE 
+===========================================================================-->
+        <!-- Javascript -->
+        <script>
+          init.push(function () {
+            $('#jq-datatables-example').dataTable();
+            $('#jq-datatables-example_wrapper .table-caption').text('Reports');
+            $('#jq-datatables-example_wrapper .dataTables_filter input').attr('placeholder', 'Search...');
+          });
+        </script>
+        <!-- / Javascript -->
+
+        <div data-ng-include src="'/app/repot.html'"></div>
           <!-- CHARTS HERE -->
           <div class="row">
             <div class="col-lg-12">
@@ -204,9 +124,6 @@
         </div>
       </section>
       <!-- END OF CHARTS -->
-      <aside class="bg-light lter b-l aside-sm">
-        <div class="wrapper">aside content</div>
-      </aside>
     </section>
     <!-- Footer -->
     <div ng-include src="'/app/footer.html'"></div>
@@ -224,6 +141,7 @@
 <script src="js/app.plugin.js"></script>
 <script src="js/app.data.js"></script>
 <script src="js/slimscroll/jquery.slimscroll.min.js" cache="false"></script>
+<script src="js/table/delete_row.js" cache="false"></script>
 <!-- Sparkline Chart -->
 <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
 <!-- Easy Pie Chart -->
@@ -231,6 +149,27 @@
 <!-- Morris -->
 <script src="js/charts/morris/raphael-min.js" cache="false"></script>
 <script src="js/charts/morris/morris.min.js" cache="false"></script>
+
+
+
+
+<!-- Get jQuery from Google CDN -->
+<!--[if !IE]> -->
+  <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">'+"<"+"/script>"); </script>
+<!-- <![endif]-->
+
+<!-- Pixel Admin's javascripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="http://infinite-woodland-5276.herokuapp.com/assets/javascripts/pixel-admin.min.js"></script>
+<script src="js/table/delete_row.js" cache="false"></script>
+
+<script type="text/javascript">
+  init.push(function () {
+    // Javascript code here
+  })
+  window.PixelAdmin.start(init);
+</script>
+
 <script>
   angular.module('app', []);
 </script>
