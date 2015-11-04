@@ -23,8 +23,7 @@ var reportTest = function(req, res) {
 var cti = function(req, res) {
 
     //arguments
-    var url = base_url + "campaign/get"
-        + "?campaign=" + req.session.eid;
+    var url = base_url + "campaign/get" + "?campaign=" + req.session.eid;
 
     request.get({url: url}, function (error, responce, body) {
 		res.send(body);
@@ -37,8 +36,7 @@ var cti = function(req, res) {
 function getCampaign(req, res) {
 
     //arguments
-    var url = base_url + "campaign/get"
-        + "?campaign=" + req.session.eid;
+    var url = base_url + "report/campaign?data_format=entity&campaigns=" + req.session.eid + ',';
 
     request.get({url: url}, function (error, responce, body) {
 		res.send(body);

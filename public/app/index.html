@@ -125,7 +125,7 @@
     $http.get('/api/reports?report_type=campaign')
     .then(
       function(response) {
-      	$scope.report = response.data.results;
+      	$scope.report = response.data.results[0];
         $scope.overview_ready = true;
       },
       function(response) {
