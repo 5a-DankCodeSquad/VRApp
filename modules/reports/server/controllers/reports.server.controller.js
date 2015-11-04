@@ -8,7 +8,7 @@ var config = require(appDir + '/config/config');
 //base url with authentication
 var username = config.adrollUser,
     password = config.adrollPassword,
-    base_url = "https://" + username + ':' + password + '@' + config.adrollApiUri + 'report/campaign'; 
+    base_url = "https://" + username + ':' + password + '@' + config.adrollApiUri;
 
 /**
  * test report data
@@ -22,14 +22,9 @@ var reportTest = function(req, res) {
  */
 var cti = function(req, res) {
 
-    //construct campaign ID
-    var cid = req.session.userId + "-" + req.session.fname + req.session.lname;
-
     //arguments
-    var url = base_url +
-        "?data_format=date" +
-        "&campaigns=" + cid +
-        "&past_days=" + req.query.days;
+    var url = base_url + "campaign/get"
+        + "?campaign=" + req.session.eid;
 
     request.get({url: url}, function (error, responce, body) {
 		res.send(body);
@@ -41,13 +36,9 @@ var cti = function(req, res) {
  */
 function getCampaign(req, res) {
 
-    //construct campaign ID
-    var cid = req.session.userId + "-" + req.session.fname + req.session.lname;
-
     //arguments
-    var url = base_url +
-        "?data_format=summary" +
-        "&campaigns=" + cid;
+    var url = base_url + "campaign/get"
+        + "?campaign=" + req.session.eid;
 
     request.get({url: url}, function (error, responce, body) {
 		res.send(body);
