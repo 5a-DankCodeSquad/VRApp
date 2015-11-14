@@ -35,7 +35,7 @@
         href="img/apple-touch-icon-144x144-precomposed.png">
 
 </head>
-<body ng-app="app" ng-controller="report">
+<body ng-app="app" ng-controller="master">
 <section class="vbox">
   <!--Header-->
   <header class="header bg-black navbar navbar-inverse pull-in navbar-fixed-top">
@@ -148,8 +148,12 @@
                     </a>
                     <ul class="nav none dker">
                       <li>
-                        <a href="index.html">Overview</a>
+                        <a href='#' ng-click="changeSrc('/app/campaignReport.html')">Overview</a>
                       </li>
+                      <!-- ADDING MORE REPORTS -->
+<!--                       <li>
+                        <a ng-click="changeSrc('/app/CTRchart.html')">CTR</a>
+                      </li> -->
                     </ul>
                   </li>
                 </ul>
@@ -159,52 +163,14 @@
         </section>
       </aside>
       <!--End Side Bar -->
-      <section>
-        <div class="wrapper">
-
-	<br>
-
-         <section class="panel panel-primary">
-  	  <div class="panel-heading">
-    		<h3 class="panel-title">Campaing Report Overview</h3>
-  	  </div>
-	  <div class="panel-body">
 
 
-		<table class="table">
-		<thead>
-			<tr>
-				<th>
-					overview
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-          	<tr ng-repeat="(key, value) in report">
-  			<td>
-				{{key.split('_').join(' ')}}
-	  		</td>
-			<td>
-				{{value}}
-			</td>
-		</tr>
-		<tbody>
-		</table>
-		<div ng-hide="overview_ready">
-			<p align="center">
- 			Loading
-			<br>
-			<img src="/Img/ajax-loader.gif" />
-			</p>
-		</div>	
 
-	 </div>
-     	 </section>
-      </section>
-      <aside class="bg-light lter b-l aside-sm">
-        <div class="wrapper">aside content</div>
-      </aside>
-    </section>
+    <!-- REPORTS -->
+
+    <div ng-include src="reportSrc"></div> 
+
+
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -281,25 +247,7 @@
 <!-- Morris -->
 <script src="js/charts/morris/raphael-min.js" cache="false"></script>
 <script src="js/charts/morris/morris.min.js" cache="false"></script>
-<script>
-  angular.module('app', []).controller('report', function($scope, $http) {
-    
-    $scope.report = [];
-    $scope.overview_ready = false;
- 
-    $http.get('/api/reports?report_type=campaign')
-    .then(
-      function(response) {
-      	$scope.report = response.data.results[0];
-        $scope.overview_ready = true;
-      },
-      function(response) {
-        if(response.status = 403) {
-          $location.path('/login');
-        }
-      }
-    );
-  });
-</script>
+<!-- Controllers -->
+<script src="js/master.js"></script>
 </body>
 </html>
