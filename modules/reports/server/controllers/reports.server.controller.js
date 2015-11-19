@@ -52,7 +52,7 @@ exports.getReportData = function (req, res) {
     var data = '';
 
     //send back 403 for unauthenticated users
-    if(!(req.session && req.session.userId)) {
+    if(!(req.session && req.session.userId) || req.session.eid === "NONE" ) {
 	    res.status(403).send("authentication failed");
     } else {
 
