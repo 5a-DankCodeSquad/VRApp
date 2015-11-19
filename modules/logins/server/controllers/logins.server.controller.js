@@ -1,9 +1,49 @@
-"use strict";
+'use strict';
 
 var request = require('request');
 var path = require('path');
 var appDir = path.dirname(require.main.filename);
 var config = require(appDir + '/config/config');
+
+
+
+/**
+ * gives the session an EID
+ */
+function sendeid(req, res) {
+
+	    var username = config.adrollUser,
+            password = config.adrollPassword,
+            base_url = "https://" + username + ':' + password + '@' + config.adrollApiUri + 'report/campaign'; 
+    
+        //arguments
+        var url = base_url +
+            "?data_format=entity";
+
+        //construct expected campaign name
+        var cname = req.session.userId + "-" + req.session.fname + req.session.lname;
+
+        //get EID
+        request.get({url: url}, function (error, responce, body) {
+		    
+		    var results = JSON.parse(body).results;
+
+            req.session.eid = "NONE";
+       
+            //search for the cname
+		    for(var e in results) {
+                console.log(results[e].campaign);
+                console.log(cname);
+                if (results[e].campaign && results[e].campaign === cname) {               
+                    req.session.eid = results[e].eid;
+                    break;
+                }
+
+		     }
+		     		     
+		     res.send();
+	    });
+}
 
 /**
  * authenticate and get a new sessionId
@@ -39,12 +79,12 @@ exports.getSession = function(req, res) {
                     //make a new session
                     req.session.userId = userId;
 
-	            //store name with session, needed to re-construct campain ID
-		    req.session.fname = FNAME;
-		    req.session.lname = LNAME;
-                    req.session.eid = userId + "-" + FNAME + LNAME;
+	                //store name with session, needed to re-construct campain ID
+		            req.session.fname = FNAME;
+		            req.session.lname = LNAME;
+
                     //now they never need to login again
-                    res.send();
+                    sendeid(req, res);
 
                 } else {
                     //invalid login
@@ -60,15 +100,41 @@ exports.getSession = function(req, res) {
 exports.spoofUser = function(req, res) {
 
     if(config.enableSpoofUser) {
+        req.session.userId = req.query.uid;
+	    req.session.fname = req.query.fname;
+	    req.session.lname = req.query.lname;
 
-	req.session.userId = req.query.userId;
-	req.session.fname = req.query.fname;
-	req.session.lname = req.query.lname;
-        req.session.eid = req.session.userId + "-" + req.session.fname + req.session.lname;
+	    var username = config.adrollUser,
+            password = config.adrollPassword,
+            base_url = "https://" + username + ':' + password + '@' + config.adrollApiUri + 'report/campaign'; 
+    
+        //arguments
+        var url = base_url +
+            "?data_format=entity";
 
         //construct expected campaign name
         var cname = req.session.userId + "-" + req.session.fname + req.session.lname;
-	res.render('modules/logins/server/views/the_man_who_sold_the_world', {alias : req.session.userId + "-" + req.session.fname + req.session.lname + " :" + req.session.eid});
 
+        //get EID
+        request.get({url: url}, function (error, responce, body) {
+		    
+		    var results = JSON.parse(body).results;
+
+            req.session.eid = "NONE";
+ 
+       
+            //search for the cname
+		    for(var e in results) {
+                console.log(results[e].campaign);
+                console.log(cname);
+                if (results[e].campaign && results[e].campaign === cname) {               
+                    req.session.eid = results[e].eid;
+                    break;
+                }
+
+		     }
+
+		     res.render('modules/logins/server/views/the_man_who_sold_the_world', {alias : req.session.userId + "-" + req.session.fname + req.session.lname + " :" + req.session.eid});
+	    });
     } else {res.status(403).send();}
 };
