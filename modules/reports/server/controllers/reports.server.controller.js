@@ -23,7 +23,7 @@ var reportTest = function(req, res) {
 var cti = function(req, res) {
 
     //arguments
-    var url = base_url + "campaign/get" + "?campaign=" + req.session.eid;
+    var url = base_url + "report/campaign?data_format=date&campaigns=" + "?campaigns=" + req.session.eid + ',';
 
     request.get({url: url}, function (error, responce, body) {
 		res.send(body);
