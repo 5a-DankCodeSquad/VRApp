@@ -17,8 +17,40 @@ app.controller('overview', function($scope, $http) {
         }, 
         function(response) {
             if(response.status = 403) {
-                $location.path('/login');
+                window.location.href = '/login';
             } 
         } 
-    ); 
+    );
+});
+
+/* CTR Controller */
+app.controller('ctr', function($scope, $http) {
+
+        $scope.n = 0;
+        $scope.clicks = [];
+        $scope.impressions = [];
+        $scope.ctr = [];
+        $scope.report = {};
+        $scope.report_ready = false;
+
+        $http.get('/api/reports?report_type=ctr').then(
+        function(response) {
+            var report = response.data.results;
+
+            for (var day in report) {
+                $scope.clicks.push(report[day].clicks);
+                $scope.impressions.push(report[day].impressions);
+                $scope.ctr.push(report[day].ctr);
+            }
+ 
+            $scope.n = report.length;
+            $scope.report_ready = true;
+            $(window).resize();
+        }, 
+        function(response) {
+            if(response.status = 403) {
+                window.location.href = '/login';
+            } 
+        } 
+    );
 });
