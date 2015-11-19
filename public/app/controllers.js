@@ -17,7 +17,7 @@ app.controller('overview', function($scope, $http) {
         }, 
         function(response) {
             if(response.status = 403) {
-                $location.path('/login');
+                window.location.href = '/login';
             } 
         } 
     );
@@ -49,7 +49,7 @@ app.controller('ctr', function($scope, $http) {
         }, 
         function(response) {
             if(response.status = 403) {
-                $location.path('/login');
+                window.location.href = '/login';
             } 
         } 
     );
