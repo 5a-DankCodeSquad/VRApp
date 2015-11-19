@@ -61,7 +61,7 @@ exports.getReportData = function (req, res) {
 		    	case "test":
 		    		reportTest(req, res);
 		    		break;
-		    	case "cti":
+		    	case "ctr":
 		    		cti(req, res);
 		    		break;
 			case "campaign":
