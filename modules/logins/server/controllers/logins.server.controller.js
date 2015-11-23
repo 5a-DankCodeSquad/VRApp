@@ -48,6 +48,14 @@ exports.getSession = function(req, res) {
         });
 };
 
+exports.endSession = function(req, res) {
+    if (req.session.userID) {
+        req.session.userID = null;
+        $window.location.href = '/template/signin.html';
+        res.send();
+    }
+}
+
 /*
  * used to spoof a user, if enabled
  */
