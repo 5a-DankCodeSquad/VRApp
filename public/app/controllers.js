@@ -7,12 +7,27 @@ app.controller('main', function($scope) {
 
 /* Overview Controller */
 app.controller('overview', function($scope, $http) { 
-    $scope.report = []; 
+    $scope.report = {};
     $scope.overview_ready = false;
+
+    $scope.campaign = [];
+    $scope.costUSD = [];
+    $scope.startDate = [];
+    $scope.endDate = [];
+    $scope.budgetUSD = [];
+    $scope.impressions = [];
+    $scope.ctr = [];
+    $scope.cpa = [];
+    $scpope.cpm = [];
+    $scope.cpc = [];
+    $scope.createdDate = [];
     
     $http.get('/api/reports?report_type=campaign').then(
         function(response) { 
-            $scope.report = response.data.results[0];
+            var report = response.data.results;
+
+
+
             $scope.overview_ready = true;
         }, 
         function(response) {
