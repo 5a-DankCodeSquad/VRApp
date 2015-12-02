@@ -8,11 +8,24 @@ app.controller('main', function($scope) {
 /* Overview Controller */
 app.controller('overview', function($scope, $http) { 
     $scope.report = []; 
+    $scope.keys = ["Clicks", "Impressions", "CTR", "CPM", "Budget USD", "Cost USD", "Start Date", "End Date", "Created Date"];
     $scope.overview_ready = false;
     
     $http.get('/api/reports?report_type=campaign').then(
         function(response) { 
-            $scope.report = response.data.results[0];
+        	console.log(response.data.results[0]);
+
+			$scope.report.push(response.data.results[0].clicks);
+			$scope.report.push(response.data.results[0].impressions);
+			$scope.report.push(response.data.results[0].ctr);
+			$scope.report.push(response.data.results[0].cpm);
+			$scope.report.push(response.data.results[0].budget_USD);
+			$scope.report.push(response.data.results[0].cost);
+			$scope.report.push(response.data.results[0].start_date);
+			$scope.report.push(response.data.results[0].end_date);
+			$scope.report.push(response.data.results[0].created_date);
+
+            //$scope.report = response.data.results[0];
             $scope.overview_ready = true;
         }, 
         function(response) {

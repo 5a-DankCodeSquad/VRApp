@@ -1,24 +1,23 @@
 <section class="panel panel-primary">
-  <h3 class="panel-title panel-heading"><br>Campaing Report Overview</br></h3>
+  <h3 class="panel-title panel-heading"><br>Campaign Report Overview</br></h3>
    <div ng-controller="overview">
       <table class="table">
          <thead>
             <tr>
                <th class="panel-heading">
-                 Column A
+                 Attribute
                </th>
               <th class="panel-heading">
-                Column B
-              </th>
-              <th class="panel-heading">
-                Column C
+                Value
               </th>
             </tr>
          </thead>
          <tbody>
             <tr ng-repeat="(key, value) in report">
-               <td>
-                  {{key.split('_').join(' ')}}
+               <td> 
+                  <strong>
+                    {{keys[key]}}
+                  </strong>
                </td>
                <td>
                   {{value}}
