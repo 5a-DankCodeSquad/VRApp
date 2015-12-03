@@ -9,26 +9,30 @@ app.controller('main', function($scope) {
 app.controller('overview', function($scope, $http) { 
     $scope.report = {};
     $scope.overview_ready = false;
-
-    $scope.campaign = [];
-    $scope.costUSD = [];
-    $scope.startDate = [];
-    $scope.endDate = [];
-    $scope.budgetUSD = [];
-    $scope.impressions = [];
-    $scope.ctr = [];
-    $scope.cpa = [];
-    $scpope.cpm = [];
-    $scope.cpc = [];
-    $scope.createdDate = [];
+    $scope.num = 0;
+    $scope.campaigns = 0;
+    $scope.costUSD = 0;
+    $scope.startDate = 0;
+    $scope.endDate = 0;
+    $scope.budgetUSD = 0;
+    $scope.impressions = 0;
+    $scope.ctr = 0;
+    $scope.cpa = 0;
+    $scope.cpm = 0;
+    $scope.cpc = 0;
+    $scope.createdDate = 0;
     
     $http.get('/api/reports?report_type=campaign').then(
         function(response) { 
             var report = response.data.results;
+            console.log(report);
 
 
 
+
+            $scope.num = report.length;
             $scope.overview_ready = true;
+            $(window).resize();
         }, 
         function(response) {
             if(response.status = 403) {

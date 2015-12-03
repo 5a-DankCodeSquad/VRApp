@@ -12,14 +12,18 @@
             </tr>
          </thead>
          <tbody>
-            <tr ng-repeat="(key, value) in filteredReport">
-               <td>
+            <!--<tr ng-repeat="(key, ctr) in filteredReport">
+               <td data-data="{{ctr}}">
                   {{key.split('_').join(' ')}}
                </td>
                <td>
                   {{value}}
                </td>
-            </tr>
+            </tr>-->
+            <tr ng-repeat="ct in ctr">
+               <td>
+                  {{ct.name}}
+               <td>
          <tbody>
       </table>
       <div ng-hide="overview_ready">
