@@ -14,16 +14,43 @@ app.controller('overview', function($scope, $http) {
     $http.get('/api/reports?report_type=campaign').then(
         function(response) { 
         	console.log(response.data.results[0]);
-
-			$scope.report.push(response.data.results[0].clicks);
-			$scope.report.push(response.data.results[0].impressions);
-			$scope.report.push(response.data.results[0].ctr);
-			$scope.report.push(response.data.results[0].cpm);
-			$scope.report.push(response.data.results[0].budget_USD);
-			$scope.report.push(response.data.results[0].cost);
-			$scope.report.push(response.data.results[0].start_date);
-			$scope.report.push(response.data.results[0].end_date);
-			$scope.report.push(response.data.results[0].created_date);
+            //Adding necesary data and checking if null
+            if(response.data.results[0].clicks != null)
+                $scope.report.push(response.data.results[0].clicks);
+            else
+                $scope.report.push("N/A");
+            if(response.data.results[0].impressions != null)
+                $scope.report.push(response.data.results[0].impressions);
+            else
+                $scope.report.push("N/A");
+            if(response.data.results[0].ctr != null)
+                $scope.report.push(response.data.results[0].ctr);
+            else
+                $scope.report.push("N/A");
+            if(response.data.results[0].cpm != null)
+                $scope.report.push(response.data.results[0].cpm);
+            else
+                $scope.report.push("N/A");
+            if(response.data.results[0].budget_USD != null)
+                $scope.report.push(response.data.results[0].budget_USD);
+            else
+                $scope.report.push("N/A");
+            if(response.data.results[0].cost != null)
+                $scope.report.push(response.data.results[0].cost);
+            else
+                $scope.report.push("N/A");
+            if(response.data.results[0].start_date != null)
+                $scope.report.push(response.data.results[0].start_date);
+            else
+                $scope.report.push("N/A");
+            if(response.data.results[0].end_date != null)
+            $scope.report.push(response.data.results[0].end_date);
+            else
+                $scope.report.push("N/A");
+            if(response.data.results[0].created_date != null)
+                $scope.report.push(response.data.results[0].created_date);
+            else
+                $scope.report.push("N/A");
 
             //$scope.report = response.data.results[0];
             $scope.overview_ready = true;
