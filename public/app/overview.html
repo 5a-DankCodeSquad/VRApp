@@ -1,20 +1,36 @@
 <section class="panel panel-primary">
+<<<<<<< HEAD
    <div class="panel-heading">
       <h3 class="panel-title">Campaign Report Overview</h3>
    </div>
    <div class="panel-body" ng-controller="overview">
+=======
+  <h3 class="panel-title panel-heading"><br>Campaign Report Overview</br></h3>
+   <div ng-controller="overview">
+>>>>>>> 805fc47311d444675c1b71cf2938fd8ec94ce1ba
       <table class="table">
          <thead>
             <tr>
-               <th>
-                  overview
+               <th class="panel-heading">
+                 Attribute
                </th>
+              <th class="panel-heading">
+                Value
+              </th>
             </tr>
          </thead>
          <tbody>
+<<<<<<< HEAD
             <!--<tr ng-repeat="(key, ctr) in filteredReport">
                <td data-data="{{ctr}}">
                   {{key.split('_').join(' ')}}
+=======
+            <tr ng-repeat="(key, value) in report">
+               <td> 
+                  <strong>
+                    {{keys[key]}}
+                  </strong>
+>>>>>>> 805fc47311d444675c1b71cf2938fd8ec94ce1ba
                </td>
                <td>
                   {{value}}

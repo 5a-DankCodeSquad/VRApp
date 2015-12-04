@@ -344,8 +344,10 @@ a:hover .caret-white {
   border-right: none;
 }
 .panel-heading {
-  border-color: #ebeff6;
-  background-color: #fff;
+  font-weight: bold;
+  color: #fff;
+  border-color: #0074D9;
+  background-color:#0074D9;
   border-radius: 2px 2px 0 0;
 }
 .panel-heading.bg {
