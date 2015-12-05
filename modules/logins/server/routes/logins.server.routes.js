@@ -11,12 +11,12 @@ module.exports = function(app) {
 	app.route('/api/logins').all()
 		.post(logins.getSession);
 
-	// Logins Route
-	app.route('/api/logout').all()
-		.post(logins.endSession);
+	// Logout Route
+	app.route('/logout').all()
+		.get(logins.endSession);
 
 	// User Spoofer Route
 	app.route("/api/spoofer").all()
     	.get(logins.spoofUser);
-    
+
 };
