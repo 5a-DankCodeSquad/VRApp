@@ -326,8 +326,8 @@ a:hover .caret-white {
 }
 .panel .table td,
 .panel .table th {
-  padding: 6px 15px;
-  border-top: 1px solid #eaedef;
+  padding: 10px 20px;
+  border-top: 2px solid #0074D9;
 }
 .panel .table thead > tr > th {
   border-bottom: 1px solid #e0e4e8;
@@ -343,9 +343,17 @@ a:hover .caret-white {
 .panel .table-striped > thead th:last-child {
   border-right: none;
 }
+.panel-font {
+  font-size: 17px;
+}
+.panel-font-data {
+  font-size: 14px !important;
+}
 .panel-heading {
-  border-color: #ebeff6;
-  background-color: #fff;
+  color: #fff;
+  border-color: #0074D9;
+  background-color:#0074D9;
+  font-size: 19px !important;
   border-radius: 2px 2px 0 0;
 }
 .panel-heading.bg {

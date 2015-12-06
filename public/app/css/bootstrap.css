@@ -54,6 +54,7 @@ abbr[title] {
 }
 b,
 strong {
+  font-size: 18px;
   font-weight: bold;
 }
 dfn {
@@ -5514,9 +5515,10 @@ button.list-group-item-danger.active:focus {
   color: inherit;
 }
 .panel-title {
+  font-weight: bold;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 20px;
   color: inherit;
 }
 .panel-title > a,
@@ -5751,8 +5753,8 @@ button.list-group-item-danger.active:focus {
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #0074D9;
+  border-color: #0074D9;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #337ab7;

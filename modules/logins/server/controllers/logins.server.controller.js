@@ -5,8 +5,6 @@ var path = require('path');
 var appDir = path.dirname(require.main.filename);
 var config = require(appDir + '/config/config');
 
-
-
 /**
  * gives the session an EID
  */
@@ -91,6 +89,12 @@ exports.getSession = function(req, res) {
                     res.status(403).send("invalid username or password");
                 }
             }
+        });
+};
+
+exports.endSession = function(req, res) {
+        req.session.destroy(function() {
+                res.redirect('/login');
         });
 };
 
