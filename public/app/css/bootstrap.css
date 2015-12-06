@@ -54,6 +54,7 @@ abbr[title] {
 }
 b,
 strong {
+  font-size: 18px;
   font-weight: bold;
 }
 dfn {
@@ -5751,8 +5752,8 @@ button.list-group-item-danger.active:focus {
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #0074D9;
+  border-color: #0074D9;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #337ab7;
