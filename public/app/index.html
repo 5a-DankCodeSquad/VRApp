@@ -41,7 +41,7 @@
                      <a class="btn btn-link visible-xs" data-toggle="class:show" data-target=".nav-primary">
                      <i class="fa fa-bars"></i>
                      </a>
-                     <a href="#" class="nav-brand" data-toggle="fullscreen"><img src="images/offrsLogo.png" /></a>
+                     <a href="#" class="nav-brand" data-toggle="fullscreen" title="link to main offrs.com page"><img src="images/offrsLogo.png" /></a>
                      <a class="btn btn-link visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
                      <i class="fa fa-comment-o"></i>
                      </a>
@@ -78,14 +78,33 @@
                                              <i class="fa fa-angle-up text-active"></i>
                                              </span>
                                              <i class="fa fa-file-text"></i>
-                                             <span>Reports</span>
+                                             <span title="view specific data regarding your campain">Reports</span>
                                              </a>
                                              <ul class="nav none dker">
                                                 <li>
-                                                   <a href="#" ng-click="src='/app/overview.html'">Overview</a>
+                                                   <a href="#" ng-click="src='/app/overview.html'"title="Display general summary of advertising campaign">Overview</a>
                                                 </li>
                                                 <li>
-                                                   <a href="#" ng-click="src='/app/ctr.html'">Clicks and Impressions</a>
+                                                   <a href="#" ng-click="src='/app/ctr.html'"title="View number of times your ads have been clicked on and how many times your ads have been viewed">Clicks and Impressions</a>
+                                                </li>
+                                             </ul>
+                                          </li>
+                                          <li>
+                                             <!--Help Tab-->
+                                             <a href="#" class="dropdown-toggle">
+                                             <span class="pull-right auto">
+                                             <i class="fa fa-angle-down text"></i>
+                                             <i class="fa fa-angle-up text-active"></i>
+                                             </span>
+                                             <i class="glyphicon glyphicon-question-sign"></i>
+                                             <span title="Get info on site features">Help</span>
+                                             </a>
+                                             <ul class="nav none dker">
+                                                <li>
+                                                   <a href="https://offrs.zendesk.com/hc/en-us" title="search navigation for FAQs">Help Center</a>
+                                                </li>
+                                                <li>
+                                                   <a href="http://offrstraining.usefedora.com/" title="access demos and videos on general site navigation">Online Training</a>
                                                 </li>
                                              </ul>
                                           </li>
