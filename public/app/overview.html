@@ -1,23 +1,20 @@
-<section class="panel panel-primary" style="max-width: 1140px;">
-  <h2 class="panel-title panel-heading" style="color:#0074D9; background-color: #fff;"><br>Campaign Report Overview</br></h2>
-   <div ng-controller="overview">
-      <table class="table" style="max-width: 1140px">
+<section class="panel panel-primary">
+   <div class="panel-heading">
+      <h3 class="panel-title">Campaing Report Overview</h3>
+   </div>
+   <div class="panel-body" ng-controller="overview">
+      <table class="table">
          <thead>
             <tr>
-               <th class="panel-heading">
-                 Attribute
+               <th>
+                  overview
                </th>
-              <th class="panel-heading" >
-                Value
-              </th>
             </tr>
          </thead>
          <tbody>
-            <tr ng-repeat="(key, value) in report" class="panel-font">
+            <tr ng-repeat="(key, value) in report">
                <td>
-                  <strong>
-                    {{keys[key]}}
-                  </strong>
+                  {{key.split('_').join(' ')}}
                </td>
                <td>
                   {{value}}
