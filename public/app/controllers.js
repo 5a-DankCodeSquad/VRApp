@@ -2,7 +2,7 @@ var app = angular.module('app', []);
 
 /* Sidebar Controller */
 app.controller('main', function($scope) { 
-    $scope.src = "overview.html";
+    $scope.src = "/app/overview.html";
 });
 
 /* Overview Controller */
