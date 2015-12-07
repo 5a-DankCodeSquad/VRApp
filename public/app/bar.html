@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-lg-12" style="max-width: 750px;">
 
-        <section class="panel" ng-show="ready_report">
+        <section class="panel" ng-show="report_ready">
           <header class="panel-heading">
             Cost per Click
           </header>
@@ -19,7 +19,7 @@
           </div>
         </section>
 
-        <section class="panel" ng-show="ready_report">
+        <section class="panel" ng-show="report_ready">
           <header class="panel-heading">
             Cost per Thousand Impressions
           </header>
@@ -46,7 +46,7 @@
         </section>
       </div>
     </div>
-    
+
     <div ng-hide="report_ready">
       <p align="center">
         Loading
