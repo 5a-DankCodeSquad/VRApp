@@ -53,5 +53,38 @@ app.controller('ctr', function($scope, $http) {
                 window.location.href = '/login';
             } 
         } 
+    );});
+});
+
+/* Bar Controller */
+app.controller('bar', function($scope, $http) {
+
+    $scope.n = 0;
+    $scope.cpm = [];
+    $scope.cpc = [];
+    $scope.cpa = [];
+    $scope.report = {};
+    $scope.report_ready = false;
+
+    $http.get('/api/reports?report_type=ctr').then(
+        function(response) {
+            var report = response.data.results;
+
+            for (var day in report) {
+                $scope.cpc.push(report[day].cpc);
+                $scope.cpm.push(report[day].cpm);
+                $scope.cpa.push(report[day].cpa);
+
+            }
+
+            $scope.n = report.length;
+            $scope.report_ready = true;
+            $(window).resize();
+        },
+        function(response) {
+            if(response.status = 403) {
+                window.location.href = '/login';
+            }
+        }
     );
 });
