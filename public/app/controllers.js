@@ -60,9 +60,9 @@ app.controller('ctr', function($scope, $http) {
 app.controller('bar', function($scope, $http) {
 
     $scope.n = 0;
-    $scope.cpm = [];
     $scope.cpc = [];
-    $scope.cpa = [];
+    $scope.cpm = [];
+    $scope.ctr = [];
     $scope.report = {};
     $scope.report_ready = false;
 
@@ -73,7 +73,7 @@ app.controller('bar', function($scope, $http) {
             for (var day in report) {
                 $scope.cpc.push(report[day].cpc);
                 $scope.cpm.push(report[day].cpm);
-                $scope.cpa.push(report[day].cpa);
+                $scope.ctr.push(report[day].ctr);
 
             }
 
