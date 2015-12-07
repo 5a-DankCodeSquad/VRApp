@@ -1,6 +1,6 @@
 <section class="panel panel-primary" style="max-width: 755px;">
   <div class="panel-heading">
-    <h3 class="panel-title">Cost Per Attribute</h3>
+    <h3 class="panel-title" title="view the total cost of ads based on number of clicks">Cost Per Attribute</h3>
   </div>
   <div class="panel-body" ng-controller="bar">
     <div class="row">
@@ -14,7 +14,7 @@
             <div class="sparkline" data-type="bar" data-resize="true" data-height="200px" data-width="750px" data-bar-width="20px" data-bar-color="#007f7f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,180,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{'[' + cpc.toString() + ']'}}"></div>
             <!-- Change 'axis-full' to cover only 1 of the 3 bars -->
             <ul class="list-inline text-muted axis axis-full">
-              <li class="panel-font-data">Past {{ n }} Days</li>
+              <li class="panel-font-data" title="view total cost of add based on number of ad clicks">Past {{ n }} Days</li>
             </ul>
           </div>
         </section>
@@ -27,7 +27,7 @@
             <div class="sparkline" data-type="bar" data-resize="true" data-height="200px" data-width="750px" data-bar-width="20px" data-bar-color="#007f7f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,180,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{'[' + cpm.toString() + ']'}}"></div>
             <!-- Same as above -->
             <ul class="list-inline text-muted axis axis-full">
-              <li class="panel-font-data">Past {{ n }} Days</li>
+              <li class="panel-font-data" title="view total cost of ad based on every 1000 ad views">Past {{ n }} Days</li>
             </ul>
           </div>
         </section>
@@ -40,7 +40,7 @@
             <div class="sparkline" data-type="bar" data-resize="true" data-height="200px" data-width="750px" data-bar-width="20px" data-bar-color="#007f7f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,180,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{'[' + ctr.toString() + ']'}}"></div>
             <!-- Same as above -->
             <ul class="list-inline text-muted axis axis-full">
-              <li class="panel-font-data">Past {{ n }} Days</li>
+              <li class="panel-font-data" title="view percentage of all people viewing the ad who clicked on the ad">Past {{ n }} Days</li>
             </ul>
           </div>
         </section>
