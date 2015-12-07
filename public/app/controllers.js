@@ -2,7 +2,7 @@ var app = angular.module('app', []);
 
 /* Sidebar Controller */
 app.controller('main', function($scope) { 
-    $scope.src = "overview.html";
+    $scope.src = "/app/overview.html";
 });
 
 /* Overview Controller */
@@ -11,8 +11,12 @@ app.controller('overview', function($scope, $http) {
     $scope.report = {};
 =======
     $scope.report = []; 
+<<<<<<< HEAD
     $scope.keys = ["Clicks", "Impressions", "CTR", "CPM", "Budget USD", "Cost USD", "Start Date", "End Date", "Created Date"];
 >>>>>>> 805fc47311d444675c1b71cf2938fd8ec94ce1ba
+=======
+    $scope.keys = ["clicks", "impressions", "ctr", "cpm", "budget_USD", "cost_USD", "start_date", "end_date", "created_date"];
+>>>>>>> 1a6332b1b2f812614bc889abc5bcf660f82d79ed
     $scope.overview_ready = false;
     $scope.num = 0;
     $scope.campaigns = 0;
@@ -29,6 +33,7 @@ app.controller('overview', function($scope, $http) {
     
     $http.get('/api/reports?report_type=campaign').then(
         function(response) { 
+<<<<<<< HEAD
 <<<<<<< HEAD
             var report = response.data.results;
             console.log(report);
@@ -55,6 +60,11 @@ app.controller('overview', function($scope, $http) {
             $scope.overview_ready = true;
             $(window).resize();
         }, 
+=======
+            $scope.report = response.data.results[0];
+            $scope.overview_ready = true;
+        },
+>>>>>>> 1a6332b1b2f812614bc889abc5bcf660f82d79ed
         function(response) {
             if(response.status = 403) {
                 window.location.href = '/login';

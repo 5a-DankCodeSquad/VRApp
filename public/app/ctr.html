@@ -9,42 +9,42 @@
             <header class="panel-heading">
                Clicks
             </header>
-            
+
             <div class="panel-body" style="width:100%;margin: 0 auto">
                <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="100%" data-line-width="1" data-line-color="#af536f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,180,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{'[' + clicks.toString() + ']'}}"></div>
                <ul class="list-inline text-muted axis axis-full">
-                  <li>past {{ n }} days</li>
+                  <li class="panel-font-data">Past {{ n }} Days</li>
                </ul>
             </div>
          </section>
-         
+
                   <section class="panel" ng-show="report_ready">
             <header class="panel-heading">
                Impressions
             </header>
-            
+
             <div class="panel-body" style="width:100%;margin: 0 auto">
                <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="100%" data-line-width="1" data-line-color="#afcf6f" data-spot-color="#afcf6f" data-fill-color="rgba(180,240,240,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{impressions}}"></div>
                <ul class="list-inline text-muted axis axis-full">
-                  <li>past {{ n }} days</li>
+                  <li class="panel-font-data">Past {{ n }} Days</li>
                </ul>
             </div>
          </section>
-         
+
                   <section class="panel" ng-show="report_ready">
             <header class="panel-heading">
                CTR
             </header>
-            
+
             <div class="panel-body" style="width:100%;margin: 0 auto">
                <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="100%" data-line-width="1" data-line-color="#a54f6f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,240,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{ctr}}"></div>
                <ul class="list-inline text-muted axis axis-full">
-                  <li>past {{ n }} days</li>
+                  <li class="panel-font-data">Past {{ n }} Days</li>
                </ul>
             </div>
          </section>
-         
-         
+
+
       </div>
    </div>
    <div ng-hide="report_ready">
@@ -55,3 +55,4 @@
       </p>
    </div>
 </div>
+

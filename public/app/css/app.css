@@ -344,10 +344,12 @@ a:hover .caret-white {
   border-right: none;
 }
 .panel-font {
-  font-size: 18px;
+  font-size: 17px;
+}
+.panel-font-data {
+  font-size: 14px !important;
 }
 .panel-heading {
-  font-weight: bold;
   color: #fff;
   border-color: #0074D9;
   background-color:#0074D9;

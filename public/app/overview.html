@@ -12,21 +12,30 @@
       <table class="table">
 =======
 <section class="panel panel-primary" style="max-width: 1140px;">
+<<<<<<< HEAD
   <h2 class="panel-title panel-heading" style="color:#0074D9; background-color: #fff;"><br>Campaign Report Overview</br></h2>
    <div ng-controller="overview">
       <table class="table" style="max-width: 1140px">
 >>>>>>> 325d7c2be3709deab0c55e1a8cb593de5dccaea8
+=======
+   <div class="panel-heading">
+      <h2 class="panel-title">Campaing Report Overview</h2>
+   </div>
+   <div class="panel-body" ng-controller="overview">
+      <table class="table" ng-show="overview_ready" style="max-width: 1140px;">
+>>>>>>> 1a6332b1b2f812614bc889abc5bcf660f82d79ed
          <thead>
             <tr>
-               <th class="panel-heading">
+               <th class="panel-font">
                  Attribute
                </th>
-              <th class="panel-heading" >
+              <th class="panel-font">
                 Value
               </th>
             </tr>
          </thead>
          <tbody>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <!--<tr ng-repeat="(key, ctr) in filteredReport">
@@ -43,9 +52,14 @@
                     {{keys[key]}}
                   </strong>
 >>>>>>> 805fc47311d444675c1b71cf2938fd8ec94ce1ba
+=======
+            <tr ng-repeat="key in keys" class="panel-font-data">
+               <td>
+                  {{key.split('_').join(' ')}}
+>>>>>>> 1a6332b1b2f812614bc889abc5bcf660f82d79ed
                </td>
                <td>
-                  {{value}}
+                  {{report[key] || 'N/A'}}
                </td>
             </tr>-->
             <tr ng-repeat="ct in ctr">
@@ -61,6 +75,5 @@
             <img src="/Img/ajax-loader.gif" />
          </p>
       </div>
-   </div>
    </div>
 </section>
