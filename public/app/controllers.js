@@ -53,7 +53,7 @@ app.controller('ctr', function($scope, $http) {
                 window.location.href = '/login';
             } 
         } 
-    );});
+    );
 });
 
 /* Bar Controller */
