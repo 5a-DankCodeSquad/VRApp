@@ -64,7 +64,7 @@ app.controller('bar', function($scope, $http) {
     $scope.cpm = [];
     $scope.ctr = [];
     $scope.report = {};
-    $scope.report_ready = false;
+    $scope.ready_report = false;
 
     $http.get('/api/reports?report_type=ctr').then(
         function(response) {
@@ -78,7 +78,7 @@ app.controller('bar', function($scope, $http) {
             }
 
             $scope.n = report.length;
-            $scope.report_ready = true;
+            $scope.ready_report = true;
             $(window).resize();
         },
         function(response) {
