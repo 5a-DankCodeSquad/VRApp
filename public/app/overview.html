@@ -1,8 +1,16 @@
+<!-- 
+  The primary view for the user. Once a user authenticates, they are able to see a listed
+  number of variables alongside their values pertaining to a campaign that they own.
+-->
+
 <section class="panel panel-primary" style="max-width: 1140px;">
+  <!-- The main header for the overview report table -->
   <div class="panel-heading">
     <h2 class="panel-title">Campaign Report Overview</h2>
   </div>
+  <!-- Calls the 'overview' controller to populate the table -->
   <div class="panel-body" ng-controller="overview">
+  <!-- Generates a table with 2 primary columns: An Attribute and its correspending Value -->
     <table class="table" ng-show="overview_ready" style="max-width: 1140px;">
       <thead>
       <tr>
@@ -15,6 +23,7 @@
       </tr>
       </thead>
       <tbody>
+      <!-- Uses ng-repeat to display to the user all of the attributes and values that were specified within the 'overview' controller -->
       <tr ng-repeat="key in keys" class="panel-font-data">
         <td>
           {{key.split('_').join(' ')}}
@@ -25,6 +34,7 @@
       </tr>
       <tbody>
     </table>
+    <!-- Displays a 'Loading' header alongside a gif image until the data is finished processing and correctly displayed to the user. This gif and text will disappear when the variable, 'overview_ready', is set to true by the controller. -->
     <div ng-hide="overview_ready">
       <p align="center">
         Loading
