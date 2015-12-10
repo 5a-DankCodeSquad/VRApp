@@ -105,12 +105,12 @@ exports.spoofUser = function(req, res) {
 
     if(config.enableSpoofUser) {
         req.session.userId = req.query.uid;
-	    req.session.fname = req.query.fname;
-	    req.session.lname = req.query.lname;
+	req.session.fname = req.query.fname;
+	req.session.lname = req.query.lname;
 
-	    var username = config.adrollUser,
-            password = config.adrollPassword,
-            base_url = "https://" + username + ':' + password + '@' + config.adrollApiUri + 'report/campaign'; 
+	var username = config.adrollUser,
+        password = config.adrollPassword,
+        base_url = "https://" + username + ':' + password + '@' + config.adrollApiUri + 'report/campaign'; 
     
         //arguments
         var url = base_url +
@@ -122,23 +122,17 @@ exports.spoofUser = function(req, res) {
         //get EID
         request.get({url: url}, function (error, responce, body) {
 		    
-		    var results = JSON.parse(body).results;
-
+	    var results = JSON.parse(body).results;
             req.session.eid = "NONE";
- 
-       
+            
             //search for the cname
-		    for(var e in results) {
-                console.log(results[e].campaign);
-                console.log(cname);
+            for(var e in results) {
                 if (results[e].campaign && results[e].campaign === cname) {               
                     req.session.eid = results[e].eid;
                     break;
                 }
-
-		     }
-
-		     res.render('modules/logins/server/views/the_man_who_sold_the_world', {alias : req.session.userId + "-" + req.session.fname + req.session.lname + " :" + req.session.eid});
-	    });
+            }
+            res.render('modules/logins/server/views/the_man_who_sold_the_world', {alias : req.session.userId + "-" + req.session.fname + req.session.lname + " :" + req.session.eid});
+	});
     } else {res.status(403).send();}
 };
