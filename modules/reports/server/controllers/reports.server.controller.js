@@ -57,16 +57,16 @@ exports.getReportData = function (req, res) {
     } else {
 
         //select the right data
-	    switch(req.query.report_type) {
-		    	case "test":
-		    		reportTest(req, res);
-		    		break;
-		    	case "ctr":
-		    		cti(req, res);
-		    		break;
-			case "campaign":
-				getCampaign(req, res);
-				break;
-	    }
+        switch(req.query.report_type) {
+            case "test":
+	        reportTest(req, res);
+	    	break;
+	    case "ctr":
+	        cti(req, res);
+	    	break;
+	    case "campaign":
+		getCampaign(req, res);
+		break;
+	}
     } 
 };
