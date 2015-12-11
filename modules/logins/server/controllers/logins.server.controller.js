@@ -58,14 +58,12 @@ exports.getSession = function(req, res) {
         "&APIKEY=" + config.offrApiKey,
 
         function(error, response, body) {
-		//get userID from parsed responce body
-                var parsed = JSON.parse(body);
             if (error) {
                 res.status(500).send(error);
             } else {
-
+		//get userID from parsed responce body
+                var parsed = JSON.parse(body);
                 
-
                 //DATA is empty when auth fails
                 if (parsed.DATA.length > 0) {
 
