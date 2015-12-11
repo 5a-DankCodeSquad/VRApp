@@ -1,8 +1,11 @@
 <strong> GROUP 5A README DESCRIPTION </strong>
 
 Link to the Deployed Application: https://52.33.103.172:8443/login/
+
 Data API: AdRoll
+
 CSS API: Bootstrap
+
 Footer: offrs.com
 
 
