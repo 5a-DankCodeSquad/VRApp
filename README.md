@@ -14,33 +14,33 @@ Project Features Implemented:
 
 1 Login Website & Functionality
 
-<img src="screenshots/Login">
+<img src="/screenshots/Login.png">
 
 2  Logout Functionality
 
-<img src="screenshots/Header">
+<img src="/screenshots/Header.png">
 
 3 Table Design & Data
 
-<img src="screenshots/Table">
+<img src="/screenshots/Table.png">
 
 4 Line Graphs
 
-<img src="screenshots/Line_Graph">
+<img src="/screenshots/Line_Graph.png">
 
 5 Bar Graphs
 
-<img src="screenshots/Bar_Graph">
+<img src="/screenshots/Bar_Graph.png">
 
 6 Help Functionality
 
-<img src="screenshots/Help">
+<img src="/screenshots/Help.png">
 
 7 Header, Sidebar, Footer
 
-<img src="screenshots/Header">
+<img src="/screenshots/Header.png">
 
-<img src="screenshots/Footer">
+<img src="screenshots/Footer.png">
 
 
 Instructions for Running the Project Locally:
