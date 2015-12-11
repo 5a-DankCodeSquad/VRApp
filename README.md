@@ -1,62 +1,61 @@
-GROUP 5A README DESCRIPTION
+GROUP 5A README DESCRIPTION __
+__
+Link to the Deployed Application: https://52.33.103.172:8443/login/ __
+Data API: AdRoll __
+CSS API: Bootstrap __
+Footer: offrs.com __
 
-Link to the Deployed Application: https://52.33.103.172:8443/login/
-Data API: AdRoll
-CSS API: Bootstrap
-Footer: offrs.com
+Project Features Implemented: __
+1. Login Website & Functionality __
+__
 
-Project Features Implemented:
-1. Login Website & Functionality
+2. Logout Functionality __
+__
 
+3. Table Design & Data __
+__
 
-2. Logout Functionality
+4. Line Graphs __
+__ 
 
+5. Bar Graphs __
+__
 
-3. Table Design & Data
+6. Help Functionality __
+__
 
+7. Header, Sidebar, Footer __
+__
 
-4. Line Graphs
-
-
-5. Bar Graphs
-
-
-6. Help Functionality
-
-
-7. Header, Sidebar, Footer
-
-
-Instructions for Running the Project Locally:
-1. Go to the VRApp Web Application at: https://github.com/5a-DankCodeSquad/VRApp
-2. Click on 'Download ZIP' which should be located near the top right-hand side of the screen.
-3. Unzip the file.
-4. Open your computer's terminal/console/command prompt.
-5. Navigate to the web application folder's directory.
-6. Type: 'grunt' without the '' in-between the word
-7. Wait for the terminal to finish its 'grunt' process (i.e. wait for 'lcoalhost:3000' to appear)
-8. Copy and paste this url to a new tab on your browser: http://localhost:3000/api/9poofer?uid=5070&fname=Kim&lname=Zarbo
-9. On a different tab, type: "localhost:3000"
-10. The website will be displayed.
+Instructions for Running the Project Locally: __
+1. Go to the VRApp Web Application at: https://github.com/5a-DankCodeSquad/VRApp __
+2. Click on 'Download ZIP' which should be located near the top right-hand side of the screen. __
+3. Unzip the file. __
+4. Open your computer's terminal/console/command prompt. __
+5. Navigate to the web application folder's directory. __ 
+6. Type: 'grunt' without the '' in-between the word __
+7. Wait for the terminal to finish its 'grunt' process (i.e. wait for 'lcoalhost:3000' to appear) __
+8. Copy and paste this url to a new tab on your browser: http://localhost:3000/api/9poofer?uid=5070&fname=Kim&lname=Zarbo __
+9. On a different tab, type: "localhost:3000" __
+10. The website will be displayed. __
 
 How to Update Database & Server Connections
-1. Go to the VRApp directory\n
-2. Click on 'config'\n
-3. Click on 'env'\n
-4. Open on 'local.js'\n
+1. Go to the VRApp directory __
+2. Click on 'config' __
+3. Click on 'env' __
+4. Open on 'local.js' __
 5. Change the 'uri:' text to your MongoLab Database URI and change the username & password fields as well. MongoLab explains how to do this once you create an account, a new database, and a new 'User' for that database.
+__
+__
+__
+__
+__
+__
+__
+__
+__
+__
 
-
-==========================================================================
-==========================================================================
-==========================================================================
-==========================================================================
-==========================================================================
-==========================================================================
-==========================================================================
-==========================================================================
-==========================================================================
-==========================================================================
 
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
 
