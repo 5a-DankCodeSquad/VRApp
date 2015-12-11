@@ -82,6 +82,7 @@ app.controller('bar', function($scope, $http) {
     $scope.cpm = [];        // Stores all the cpm variables from the JSON object in an array.
     $scope.ctr = [];        // Stores all the ctr variables from the JSON object in an array.
     $scope.report = {};
+    $scope.counter = 1;
     $scope.report_ready = false;    // Sets to true when data is finished loading to remove the 'loading' gif.
 
     // Calls the necessary API command to retrieve the necessary variables from AdRoll.
@@ -91,13 +92,17 @@ app.controller('bar', function($scope, $http) {
 
             // Puts all data elements into the cpc, cpm, and ctr array, respectively.
             for (var day in report) {
-                $scope.cpc.push(report[day].cpc);
-                $scope.cpm.push(report[day].cpm);
-                $scope.ctr.push(report[day].ctr);
-
+                if($scope.counter < 30) {
+                    $scope.cpc.push(report[day].cpc);
+                    $scope.cpm.push(report[day].cpm);
+                    $scope.ctr.push(report[day].ctr);
+                    $scope.counter++;
+                } else {
+                    break;
+                }
             }
             // Measures the length of the report in terms of data elements and changes report_ready to true.
-            $scope.n = report.length;
+            $scope.n = 30;
             $scope.report_ready = true;
             $(window).resize();
         },
