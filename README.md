@@ -40,11 +40,23 @@ Instructions for Running the Project Locally:
 10. The website will be displayed.
 
 How to Update Database & Server Connections
-1. Go to the VRApp directory
-2. Click on 'config'
-3. Click on 'env'
-4. Click on 'local.js'
-5. Change the 
+1. Go to the VRApp directory\n
+2. Click on 'config'\n
+3. Click on 'env'\n
+4. Open on 'local.js'\n
+5. Change the 'uri:' text to your MongoLab Database URI and change the username & password fields as well. MongoLab explains how to do this once you create an account, a new database, and a new 'User' for that database.
+
+
+==========================================================================
+==========================================================================
+==========================================================================
+==========================================================================
+==========================================================================
+==========================================================================
+==========================================================================
+==========================================================================
+==========================================================================
+==========================================================================
 
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
 
