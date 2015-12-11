@@ -12,31 +12,31 @@ Footer: offrs.com
 
 Project Features Implemented:
 
-1. Login Website & Functionality
+1 Login Website & Functionality
 
 <img src="screenshots/Login">
 
-2. Logout Functionality
+2  Logout Functionality
 
 <img src="screenshots/Header">
 
-3. Table Design & Data
+3 Table Design & Data
 
 <img src="screenshots/Table">
 
-4. Line Graphs
+4 Line Graphs
 
 <img src="screenshots/Line_Graph">
 
-5. Bar Graphs
+5 Bar Graphs
 
 <img src="screenshots/Bar_Graph">
 
-6. Help Functionality
+6 Help Functionality
 
 <img src="screenshots/Help">
 
-7. Header, Sidebar, Footer
+7 Header, Sidebar, Footer
 
 <img src="screenshots/Header">
 
