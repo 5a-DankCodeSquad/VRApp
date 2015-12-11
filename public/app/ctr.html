@@ -6,10 +6,11 @@
    <div class="row">
       <div class="col-lg-12">
          <section class="panel" ng-show="report_ready">
+           <!--Clicks graph-->
             <header class="panel-heading" title="View # of times viewers have clicked on your ads">
                Clicks
             </header>
-
+            <!--Click graph data-->
             <div class="panel-body" style="width:100%;margin: 0 auto">
                <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="100%" data-line-width="1" data-line-color="#af536f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,180,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{'[' + clicks.toString() + ']'}}"></div>
                <ul class="list-inline text-muted axis axis-full">
@@ -17,12 +18,13 @@
                </ul>
             </div>
          </section>
-
+            <!--Impressions graph-->
                   <section class="panel" ng-show="report_ready">
             <header class="panel-heading"title="view # of times your ads have been viewed">
                Impressions
             </header>
-
+            
+            <!--Impressions graph data-->
             <div class="panel-body" style="width:100%;margin: 0 auto">
                <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="100%" data-line-width="1" data-line-color="#afcf6f" data-spot-color="#afcf6f" data-fill-color="rgba(180,240,240,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{impressions}}"></div>
                <ul class="list-inline text-muted axis axis-full">
@@ -33,12 +35,13 @@
                </ul>
             </div>
          </section>
-
+              <!--CTR Graph-->
                   <section class="panel" ng-show="report_ready">
             <header class="panel-heading">
                CTR
             </header>
-
+            
+            <!--CTR graph data-->
             <div class="panel-body" style="width:100%;margin: 0 auto">
                <div class="sparkline" data-type="line" data-resize="true" data-height="185" data-width="100%" data-line-width="1" data-line-color="#a54f6f" data-spot-color="#afcf6f" data-fill-color="rgba(240,240,240,0.5)" data-highlight-line-color="#e1e5e9" data-spot-radius="4" data-data="{{ctr}}"></div>
                <ul class="list-inline text-muted axis axis-full">
