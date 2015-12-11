@@ -67,7 +67,7 @@ exports.getSession = function(req, res) {
                 var parsed = JSON.parse(body);
 
                 //DATA is empty when auth fails
-               // if (parsed.DATA.length > 0) {
+                if (parsed.DATA.length > 0) {
 
                     var index = parsed.COLUMNS.indexOf("USERID");
                     var userId = parsed.DATA[0][index];
@@ -84,7 +84,7 @@ exports.getSession = function(req, res) {
                     //now they never need to login again
                     sendeid(req, res);
 
-               // }
+                }
                else {
                     //invalid login
                     res.status(403).send("invalid username or password");
