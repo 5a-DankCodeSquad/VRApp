@@ -1,3 +1,51 @@
+GROUP 5A README DESCRIPTION
+
+Link to the Deployed Application: https://52.33.103.172:8443/login/
+Data API: AdRoll
+CSS API: Bootstrap
+Footer: offrs.com
+
+Project Features Implemented:
+1. Login Website & Functionality
+
+
+2. Logout Functionality
+
+
+3. Table Design & Data
+
+
+4. Line Graphs
+
+
+5. Bar Graphs
+
+
+6. Help Functionality
+
+
+7. Header, Sidebar, Footer
+
+
+Instructions for Running the Project Locally:
+1. Go to the VRApp Web Application at: https://github.com/5a-DankCodeSquad/VRApp
+2. Click on 'Download ZIP' which should be located near the top right-hand side of the screen.
+3. Unzip the file.
+4. Open your computer's terminal/console/command prompt.
+5. Navigate to the web application folder's directory.
+6. Type: 'grunt' without the '' in-between the word
+7. Wait for the terminal to finish its 'grunt' process (i.e. wait for 'lcoalhost:3000' to appear)
+8. Copy and paste this url to a new tab on your browser: http://localhost:3000/api/9poofer?uid=5070&fname=Kim&lname=Zarbo
+9. On a different tab, type: "localhost:3000"
+10. The website will be displayed.
+
+How to Update Database & Server Connections
+1. Go to the VRApp directory
+2. Click on 'config'
+3. Click on 'env'
+4. Click on 'local.js'
+5. Change the 
+
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/meanjs/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
