@@ -35,12 +35,14 @@
 
           <div class="masthead clearfix">
             <div class="inner">
+              <!--Offrs Logo link to offrs.com homepage-->
             <a href="https://www.offrs.com" title="link to offrs.com homepage">
               <h3 class="masthead-brand"><img src="/Img/offrsLogo.png"/></h3>
             </a>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
+                  <!--Sign up tab-->
                   <li><a href="https://offrs.com/agent_register.cfm"title="Register for access to this site and the offrs.com parent site">Sign Up</a></li>
                 </ul>
               </nav>
@@ -58,12 +60,14 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" ng-model="password" class="form-control" placeholder="Password" required>
         
+        <!--If email or password is incorrect, show error message stating which one is incorrect-->
         <div class="alert alert-danger" role="alert" ng-show="show_error_message">
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
           <span class="sr-only">Error:</span>
           {{error_message}}
         </div> 
-
+        
+        <!--Sign In button-->
         <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="signin()">Sign In</button>
         <p>Don't have an account?</p>
         <a href="https://offrs.com/agent_register.cfm">
