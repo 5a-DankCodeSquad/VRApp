@@ -1,16 +1,12 @@
-GROUP 5A README DESCRIPTION
-
+<strong> GROUP 5A README DESCRIPTION </strong>
 
 Link to the Deployed Application: https://52.33.103.172:8443/login/
-
 Data API: AdRoll
-
 CSS API: Bootstrap
-
 Footer: offrs.com
 
 
-Project Features Implemented:
+<strong> Project Features Implemented: </strong>
 
 1 Login Website & Functionality
 
@@ -43,7 +39,7 @@ Project Features Implemented:
 <img src="screenshots/Footer.png">
 
 
-Instructions for Running the Project Locally:
+<strong> Instructions for Running the Project Locally: </strong>
 
 1. Go to the VRApp Web Application at: https://github.com/5a-DankCodeSquad/VRApp
 
@@ -66,7 +62,7 @@ Instructions for Running the Project Locally:
 10. The website will be displayed.
 
 
-How to Update Database & Server Connections
+<strong> How to Update Database & Server Connections </strong>
 
 1. Go to the VRApp directory
 
